@@ -84,7 +84,7 @@ InputTooLarge
 
 JSON
 
-{ "kind": "InputTooLarge" }
+{ "kind": "InputTooLarge", "input_bytes": 4194305 }
 
 MalformedUtf8
 
@@ -96,37 +96,46 @@ UnmappedCodepoint
 
 JSON
 
-{ "kind": "UnmappedCodepoint", "codepoint": 1620, "byte_offset": 2 }
+{ "kind": "UnmappedCodepoint", "codepoint": 1620, "position": 2 }
 
 OrphanDiacritic
 
 JSON
 
-{ "kind": "OrphanDiacritic", "byte_offset": 0 }
+{ "kind": "OrphanDiacritic", "codepoint": 1614, "position": 0 }
 
 InvalidMarkCombo
 
 JSON
 
-{ "kind": "InvalidMarkCombo", "atom_index": 1 }
+{ "kind": "InvalidMarkCombo", "marks": 24, "atom_index": 1 }
 
 InvalidFlagCombo
 
 JSON
 
-{ "kind": "InvalidFlagCombo", "atom_index": 0 }
+{ "kind": "InvalidFlagCombo", "flags": 3, "atom_index": 0 }
 
 InvalidProsody
 
 JSON
 
-{ "kind": "InvalidProsody", "atom_index": 2 }
+{ "kind": "InvalidProsody", "prosody": 24, "atom_index": 0, "reason": "MADD_N|MADD_X forbidden" }
 
 ReservedFieldNonZero
 
 JSON
 
-{ "kind": "ReservedFieldNonZero", "atom_index": 0 }
+{ "kind": "ReservedFieldNonZero", "reserved": 1, "atom_index": 0 }
+
+Error field semantics
+
+    input_bytes is the raw input length in bytes at the point of rejection.
+    byte_offset is a byte position in the raw input or raw Mode B frame.
+    position is the logical decoded-input position used by Dhad error reporting.
+    atom_index is the zero-based index of the validated atom in the canonical stream.
+    Error objects must include only the fields that belong to their kind.
+    Error objects must not contain null values.
 
 Additional conventions
 stream_hex
