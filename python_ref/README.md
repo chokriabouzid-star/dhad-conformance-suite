@@ -1,52 +1,41 @@
 # Dhad Python Reference
 
-This directory contains the independent Python reference implementation work for
-Dhad conformance.
+Independent Python reference implementation for Dhad conformance.
 
-## Current status
+## Status
 
-### Mode B
-Mode B is currently implemented and verified against the published corpus.
+| Mode | Vectors | Result |
+|------|---------|--------|
+| Mode A (golden.json) | 116 | 116/116 |
+| Mode A (adversarial.json) | 39 | 39/39 |
+| Mode B (tagged.json) | 30 | 30/30 |
+| **Total** | **185** | **185/185** |
 
-Implemented:
+Full parity achieved:
 
-- tagged binary frame parsing
-- frame structure validation
-- CRC validation
-- atom parsing
-- invariant subset required by `vectors/tagged.json`
-- CoreHash recomputation
-- PhoneticHash recomputation
-
-Verification status:
-
-- `tagged.json`: **30/30 vectors match**
-- success vectors: exact stream/hash parity
-- error vectors: exact full error object parity
-
-### Mode A
-Mode A independent reimplementation has **not started yet**.
-
-Planned next steps:
-
-1. corpus inventory for `golden.json` and `adversarial.json`
-2. minimal successful Mode A path
-3. full Mode A error parity
+- success vectors: exact stream, CoreHash, PhoneticHash
+- error vectors: exact error object including all fields and reason strings
 
 ## Files
 
-- `dhad_ref.py`
-  - Python reference implementation logic (currently Mode B)
-- `verify_tagged_ref.py`
-  - Verifies the Python reference against `vectors/tagged.json`
+- `dhad_ref.py` — Python reference implementation (Mode A + Mode B)
+- `verify_tagged_ref.py` — verifies Mode B against `vectors/tagged.json`
+- `verify_golden_ref.py` — verifies Mode A against `vectors/golden.json` and `vectors/adversarial.json`
 
 ## Run
 
 ```bash
 python3 python_ref/verify_tagged_ref.py
-Expected result:
+python3 python_ref/verify_golden_ref.py
+Expected:
 
 text
 
 tagged.json: 30/30 vectors matched in Phase 2
 ALL TAGGED VECTORS MATCH (Phase 2: exact ok outputs + full error object parity)
+
+golden.json: 116/116
+adversarial.json: 39/39
+ALL MODE A VECTORS MATCH
+Dependencies
+Python 3.10+ standard library only. No external packages.
