@@ -3,27 +3,50 @@
 This directory contains the independent Python reference implementation work for
 Dhad conformance.
 
-## Phase 1 scope
+## Current status
 
-Current scope:
+### Mode B
+Mode B is currently implemented and verified against the published corpus.
 
-- Mode B only
-- parse tagged binary frame input
-- validate frame structure
-- parse atoms
-- enforce the invariant subset required by `vectors/tagged.json`
-- recompute `CoreHash`
-- recompute `PhoneticHash`
-- verify all Mode B success vectors exactly
-- verify Mode B error **kind** parity
+Implemented:
 
-## Not yet in Phase 1
+- tagged binary frame parsing
+- frame structure validation
+- CRC validation
+- atom parsing
+- invariant subset required by `vectors/tagged.json`
+- CoreHash recomputation
+- PhoneticHash recomputation
 
-- full Mode A reimplementation
-- exact field parity for every Mode B error object
-- full spec-wide invariant coverage outside current corpus needs
+Verification status:
+
+- `tagged.json`: **30/30 vectors match**
+- success vectors: exact stream/hash parity
+- error vectors: exact full error object parity
+
+### Mode A
+Mode A independent reimplementation has **not started yet**.
+
+Planned next steps:
+
+1. corpus inventory for `golden.json` and `adversarial.json`
+2. minimal successful Mode A path
+3. full Mode A error parity
+
+## Files
+
+- `dhad_ref.py`
+  - Python reference implementation logic (currently Mode B)
+- `verify_tagged_ref.py`
+  - Verifies the Python reference against `vectors/tagged.json`
 
 ## Run
 
 ```bash
 python3 python_ref/verify_tagged_ref.py
+Expected result:
+
+text
+
+tagged.json: 30/30 vectors matched in Phase 2
+ALL TAGGED VECTORS MATCH (Phase 2: exact ok outputs + full error object parity)
