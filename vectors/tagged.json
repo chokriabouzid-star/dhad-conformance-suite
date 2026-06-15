@@ -1,6 +1,407 @@
 {
+  "dhad_spec": "v1.0+CR-01..CR-07",
+  "generated_by": "dhad-rust-1.1.2",
+  "mode": "B",
   "schema_version": "1.0",
-  "dhad_spec": "v1.0+CR-07",
-  "generated_by": "bootstrap-manual",
-  "vectors": []
+  "source_suite": "tests/suite2_tagged.rs",
+  "suite": "tagged",
+  "vector_count": 30,
+  "vectors": [
+    {
+      "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000000080000ebe33bb4"
+      },
+      "mode": "B",
+      "name": "gt_t01_alef_madd_normal",
+      "phonetic_hash_hex": "81c01948a1bde7141ecbd8aef66b1914544cd8b969351e8112259c53a826d6a1",
+      "stream_hex": "0100000000080000"
+    },
+    {
+      "core_hash_hex": "34161eaaa10194d217c8726f773fd5e21e9abd0890c8b4e760d7b90b0f64a42a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001b00000000100000c03c754b"
+      },
+      "mode": "B",
+      "name": "gt_t02_waw_madd_extended",
+      "phonetic_hash_hex": "1f8a62d3ff11167e2db0d0b317808dbd89502cf3f1e66f4d56943e5c905f2ca8",
+      "stream_hex": "1b00000000100000"
+    },
+    {
+      "core_hash_hex": "8aac943540c928674e5b2e38ef9f89c08b80117c051921f7cd83ef933d5d62f8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001c0000000008000011c78553"
+      },
+      "mode": "B",
+      "name": "gt_t03_yeh_madd_normal",
+      "phonetic_hash_hex": "6770112f294a8e8b6c149712a2e3f17da5b3a199cda8f0fbc321a01075636c80",
+      "stream_hex": "1c00000000080000"
+    },
+    {
+      "core_hash_hex": "cbd7e522708e96087330790a3e2beb03115e545e8788400853c4056450c411cb",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000022000000000800005e86c2c3"
+      },
+      "mode": "B",
+      "name": "gt_t04_alef_maqsura_madd_normal",
+      "phonetic_hash_hex": "681d1c467f63196ce78f1eedfe9ea8296ea00798df94d184f24a9b404da58ccb",
+      "stream_hex": "2200000000080000"
+    },
+    {
+      "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000000080000ebe33bb4"
+      },
+      "mode": "B",
+      "name": "gt_t05_json_gt092_alef_madd_normal",
+      "phonetic_hash_hex": "81c01948a1bde7141ecbd8aef66b1914544cd8b969351e8112259c53a826d6a1",
+      "stream_hex": "0100000000080000"
+    },
+    {
+      "core_hash_hex": "34161eaaa10194d217c8726f773fd5e21e9abd0890c8b4e760d7b90b0f64a42a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001b00000000100000c03c754b"
+      },
+      "mode": "B",
+      "name": "gt_t06_json_gt093_waw_madd_extended",
+      "phonetic_hash_hex": "1f8a62d3ff11167e2db0d0b317808dbd89502cf3f1e66f4d56943e5c905f2ca8",
+      "stream_hex": "1b00000000100000"
+    },
+    {
+      "core_hash_hex": "8aac943540c928674e5b2e38ef9f89c08b80117c051921f7cd83ef933d5d62f8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001c0000000008000011c78553"
+      },
+      "mode": "B",
+      "name": "gt_t07_json_gt094_yeh_madd_normal",
+      "phonetic_hash_hex": "6770112f294a8e8b6c149712a2e3f17da5b3a199cda8f0fbc321a01075636c80",
+      "stream_hex": "1c00000000080000"
+    },
+    {
+      "core_hash_hex": "cbd7e522708e96087330790a3e2beb03115e545e8788400853c4056450c411cb",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000022000000000800005e86c2c3"
+      },
+      "mode": "B",
+      "name": "gt_t08_json_gt095_alef_maqsura_madd_normal",
+      "phonetic_hash_hex": "681d1c467f63196ce78f1eedfe9ea8296ea00798df94d184f24a9b404da58ccb",
+      "stream_hex": "2200000000080000"
+    },
+    {
+      "core_hash_hex": "8dd837c60eff174e0f40e75636deedec4bf020751f97cfe10dd1cf7117b16be0",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420000000026258dad"
+      },
+      "mode": "B",
+      "name": "gt_t_empty_frame",
+      "phonetic_hash_hex": "c5f62e920f5b06c74a02f25341f63499f1132da19084eb38e7b806c4a60a03f7",
+      "stream_hex": ""
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": ""
+      },
+      "mode": "B",
+      "name": "mode_b_empty"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014200"
+      },
+      "mode": "B",
+      "name": "frame_err_too_short"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "ff484144014201000000010000000000000053b228ba"
+      },
+      "mode": "B",
+      "name": "frame_err_wrong_magic"
+    },
+    {
+      "error": {
+        "byte_offset": 4,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144024201000000010000000000000053b228ba"
+      },
+      "mode": "B",
+      "name": "frame_err_wrong_version"
+    },
+    {
+      "error": {
+        "byte_offset": 5,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014101000000010000000000000053b228ba"
+      },
+      "mode": "B",
+      "name": "frame_err_wrong_mode"
+    },
+    {
+      "error": {
+        "byte_offset": 18,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014201000000010000000000000053b22845"
+      },
+      "mode": "B",
+      "name": "frame_err_wrong_crc"
+    },
+    {
+      "error": {
+        "byte_offset": 6,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142e803000000000000"
+      },
+      "mode": "B",
+      "name": "frame_err_n_atoms_overflow"
+    },
+    {
+      "error": {
+        "byte_offset": 6,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142ffffffff00000000"
+      },
+      "mode": "B",
+      "name": "frame_err_n_atoms_usize_overflow_like_value"
+    },
+    {
+      "error": {
+        "kind": "InputTooLarge"
+      },
+      "expected_result": "err",
+      "input": {
+        "byte_hex": "00",
+        "count": 4194305,
+        "encoding": "repeat_byte"
+      },
+      "mode": "B",
+      "name": "frame_err_oversized"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "ReservedFieldNonZero",
+        "reserved": 1
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000000000100128333a3"
+      },
+      "mode": "B",
+      "name": "frame_err_reserved_nonzero"
+    },
+    {
+      "error": {
+        "codepoint": 29,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001d0000000000000037963c91"
+      },
+      "mode": "B",
+      "name": "frame_err_reserved_base_001d"
+    },
+    {
+      "error": {
+        "codepoint": 30,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001e00000000000000d491b31f"
+      },
+      "mode": "B",
+      "name": "frame_err_reserved_base_001e"
+    },
+    {
+      "error": {
+        "codepoint": 31,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001f000000000000004a9119d3"
+      },
+      "mode": "B",
+      "name": "frame_err_reserved_base_001f"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 8,
+        "reason": "MADD bits only permitted on LONG_VOWEL_CLASS atoms"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014201000000020000000008000008e4b43a"
+      },
+      "mode": "B",
+      "name": "frame_err_madd_on_beh"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 24,
+        "reason": "MADD_NORMAL and MADD_EXTENDED are mutually exclusive"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000001000000001800009b401da8"
+      },
+      "mode": "B",
+      "name": "frame_err_madd_normal_and_extended"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "flags": 3,
+        "kind": "InvalidFlagCombo"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000003000000bd1d9da8"
+      },
+      "mode": "B",
+      "name": "at_e01_hamza_above_and_below"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "flags": 5,
+        "kind": "InvalidFlagCombo"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000001000000050000006142f68d"
+      },
+      "mode": "B",
+      "name": "at_e02_madda_and_hamza_above"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "flags": 1,
+        "kind": "InvalidFlagCombo"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014201000000180000000100000036ff6061"
+      },
+      "mode": "B",
+      "name": "at_e03_hamza_above_on_meem"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "flags": 2,
+        "kind": "InvalidFlagCombo"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000001b000000020000003b575afd"
+      },
+      "mode": "B",
+      "name": "at_e04_hamza_below_on_waw"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "flags": 4,
+        "kind": "InvalidFlagCombo"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000019000000040000009a0f149a"
+      },
+      "mode": "B",
+      "name": "at_e05_madda_on_noon"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 3,
+        "reason": "TANWEEN_FATH and TANWEEN_DAMM are mutually exclusive"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014201000000190000000003000094263017"
+      },
+      "mode": "B",
+      "name": "at_f01_tanween_fath_and_damm_mode_b"
+    }
+  ]
 }

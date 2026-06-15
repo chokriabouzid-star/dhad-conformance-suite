@@ -1,6 +1,1519 @@
 {
+  "dhad_spec": "v1.0+CR-01..CR-07",
+  "generated_by": "dhad-rust-1.1.2",
+  "mode": "A",
   "schema_version": "1.0",
-  "dhad_spec": "v1.0+CR-07",
-  "generated_by": "bootstrap-manual",
-  "vectors": []
+  "source_suite": "tests/suite1_golden.rs",
+  "suite": "golden",
+  "vector_count": 116,
+  "vectors": [
+    {
+      "core_hash_hex": "8dd837c60eff174e0f40e75636deedec4bf020751f97cfe10dd1cf7117b16be0",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": ""
+      },
+      "input_utf8_preview": "",
+      "mode": "A",
+      "name": "gt_117_empty",
+      "phonetic_hash_hex": "c5f62e920f5b06c74a02f25341f63499f1132da19084eb38e7b806c4a60a03f7",
+      "stream_hex": ""
+    },
+    {
+      "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a7"
+      },
+      "input_utf8_preview": "ا",
+      "mode": "A",
+      "name": "gt_001_alef",
+      "phonetic_hash_hex": "984a596fe5175c6413a180a8d1f09891fb53675f5a8b9daac5a1dd4a2ea784d0",
+      "stream_hex": "0100000000000000"
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8"
+      },
+      "input_utf8_preview": "ب",
+      "mode": "A",
+      "name": "gt_002_beh",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "b7406c7f935e0b48f468f656c4ef9104e8c4ea1f772ddd2efc71ccc4cf8cd7f6",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8aa"
+      },
+      "input_utf8_preview": "ت",
+      "mode": "A",
+      "name": "gt_003_teh",
+      "phonetic_hash_hex": "e7d29979c8bd4ac5e64f0a760b660ddfc5b7cbcb646fcf50847fa58fa524f507",
+      "stream_hex": "0300000000000000"
+    },
+    {
+      "core_hash_hex": "00f3cb11ae7a5e3939867c1c81cb52eae7fe03f51c35b5296e010c5cf9639660",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8ab"
+      },
+      "input_utf8_preview": "ث",
+      "mode": "A",
+      "name": "gt_004_theh",
+      "phonetic_hash_hex": "874fe7b9c2b4d9952400eb5eb7f8e6fe6afb040713d77bf62e613bbe4ca2f294",
+      "stream_hex": "0400000000000000"
+    },
+    {
+      "core_hash_hex": "d69525af402651c93fa677d095020f6c63bd5ccab9fe160422d64e027eb1307e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8ac"
+      },
+      "input_utf8_preview": "ج",
+      "mode": "A",
+      "name": "gt_005_jeem",
+      "phonetic_hash_hex": "a9526cd2a71b0f8519f15cf3a17cd87e1ccd4eaf8d54a5d2e5b93d637741574d",
+      "stream_hex": "0500000000000000"
+    },
+    {
+      "core_hash_hex": "1e009471fe0d6fbe92bc7dbb57c761e99eb784c6f8560800e3784387de65a349",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8ad"
+      },
+      "input_utf8_preview": "ح",
+      "mode": "A",
+      "name": "gt_006_hah",
+      "phonetic_hash_hex": "cab4780f10bf9f839338c66c1c559aa1318b54a37a65259f4bf21b5990a17880",
+      "stream_hex": "0600000000000000"
+    },
+    {
+      "core_hash_hex": "00ccda52f7145871ef7cf385735caeb698bdd1ed7fcbdac02243d267bb42499f",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8ae"
+      },
+      "input_utf8_preview": "خ",
+      "mode": "A",
+      "name": "gt_007_khah",
+      "phonetic_hash_hex": "8ca9e7edbfc84750ed139ba12faed2856e5c24321cf2b87b05932ada594e35c7",
+      "stream_hex": "0700000000000000"
+    },
+    {
+      "core_hash_hex": "0f3eeae6e8f1b4038fc9abbca55a0361315bc90e72d1abb506bccb33decfa7c7",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8af"
+      },
+      "input_utf8_preview": "د",
+      "mode": "A",
+      "name": "gt_008_dal",
+      "phonetic_hash_hex": "66cb6563624ca7271c3b688ed5f49ac5787f2d0e13806444526034f679ec1703",
+      "stream_hex": "0800000000000000"
+    },
+    {
+      "core_hash_hex": "a90a25b688af701c61e83a648dcc371f4193f72874b5731893c50e74e9485476",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b0"
+      },
+      "input_utf8_preview": "ذ",
+      "mode": "A",
+      "name": "gt_009_thal",
+      "phonetic_hash_hex": "75669dd858243389dbb6f09eb78db84b71251fd04448689acbfc0609bf863528",
+      "stream_hex": "0900000000000000"
+    },
+    {
+      "core_hash_hex": "1abe4c2dc3142434a9f75d9de2561f42f6dc6f087ccdaf9fbd6c6b189366fcd5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b1"
+      },
+      "input_utf8_preview": "ر",
+      "mode": "A",
+      "name": "gt_010_reh",
+      "phonetic_hash_hex": "763e789a85528db4f843cbaa4369fec45f832ce5857aae4212607dbf52aaef4d",
+      "stream_hex": "0a00000000000000"
+    },
+    {
+      "core_hash_hex": "9158bc22b5b8f78c4b8c8e214b41ba745d619e38224f9f5042c3d24ab99aac46",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b2"
+      },
+      "input_utf8_preview": "ز",
+      "mode": "A",
+      "name": "gt_011_zain",
+      "phonetic_hash_hex": "33573247ead48a95fa0459597e9e04c0d2e1dbc4a608e48eaf1eeff4bc0d9b0d",
+      "stream_hex": "0b00000000000000"
+    },
+    {
+      "core_hash_hex": "0a27952dbbe6b788c19077c600b10527e5bd8a58768ebdf751917dad60e1aad8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b3"
+      },
+      "input_utf8_preview": "س",
+      "mode": "A",
+      "name": "gt_012_seen",
+      "phonetic_hash_hex": "c8a412b21764893e1ebed7d49dc130990198cf833a2c49fbaf2891d882de151c",
+      "stream_hex": "0c00000000000000"
+    },
+    {
+      "core_hash_hex": "c26812351efe98b4ccd166a99d3e154e9fdcb81f2b65cbb179d9e5311b5c2eff",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b4"
+      },
+      "input_utf8_preview": "ش",
+      "mode": "A",
+      "name": "gt_013_sheen",
+      "phonetic_hash_hex": "9ee759203706c262cd9a88a75d7d15cdbd2015973ad823c21c2a2f6391541f64",
+      "stream_hex": "0d00000000000000"
+    },
+    {
+      "core_hash_hex": "ac1d71738165ecc180191f0e17b13fa001bf8a044aba46367166f47c2ba2bb1e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b5"
+      },
+      "input_utf8_preview": "ص",
+      "mode": "A",
+      "name": "gt_014_sad",
+      "phonetic_hash_hex": "0672118f4a8fca3ae4f8501257fc9bfe70f2acca83084386bd7a3f0b2ec0800e",
+      "stream_hex": "0e00000000000000"
+    },
+    {
+      "core_hash_hex": "c61c835bd964bd0d6ae6b0cf27aee404e5288d6b1dc42db8a0e7a5832ed3875a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b6"
+      },
+      "input_utf8_preview": "ض",
+      "mode": "A",
+      "name": "gt_015_dad",
+      "phonetic_hash_hex": "10146ac1629602bdaf031a19619cd90ac66195cc4ec75beb6252bf5441962f52",
+      "stream_hex": "0f00000000000000"
+    },
+    {
+      "core_hash_hex": "f5b0bea8b8549fd811e2e4d106dfbb84beb869f9b30853e8fca0460fc399144a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b7"
+      },
+      "input_utf8_preview": "ط",
+      "mode": "A",
+      "name": "gt_016_tah",
+      "phonetic_hash_hex": "d312ea60d6d7a3992ffd05dbaa1fdf9165299a4473c66e09ec1645a124a8d8b0",
+      "stream_hex": "1000000000000000"
+    },
+    {
+      "core_hash_hex": "0efccc5867d9acc632683458a064bbf1f7725a180b7bc835254f897761534e32",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b8"
+      },
+      "input_utf8_preview": "ظ",
+      "mode": "A",
+      "name": "gt_017_zah",
+      "phonetic_hash_hex": "5cc2477bf62b4dd33ab921e458fd0812dddc2ffd4606b01c6424c0f8086bfc4a",
+      "stream_hex": "1100000000000000"
+    },
+    {
+      "core_hash_hex": "087119057893476200afa2fd45d4360e73938ba3c70ea203259c79299c8f34fd",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8b9"
+      },
+      "input_utf8_preview": "ع",
+      "mode": "A",
+      "name": "gt_018_ain",
+      "phonetic_hash_hex": "36f5b31aa81ccd8cb4749f5dfea255243a18c2f0633797ed057807a1a72621b1",
+      "stream_hex": "1200000000000000"
+    },
+    {
+      "core_hash_hex": "327e61c10617b1bf1373206aefe45d8f65b608a843c20f0064a88b71e21ce459",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8ba"
+      },
+      "input_utf8_preview": "غ",
+      "mode": "A",
+      "name": "gt_019_ghain",
+      "phonetic_hash_hex": "1dd651be0224b187e42bee33cba29b86a70ed09e9b968a18e20e468b87f080df",
+      "stream_hex": "1300000000000000"
+    },
+    {
+      "core_hash_hex": "bc2d6a831b01c132dc5bb762a99d72612d9eb18c4f9534e92b91192f8771f6c5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d981"
+      },
+      "input_utf8_preview": "ف",
+      "mode": "A",
+      "name": "gt_020_feh",
+      "phonetic_hash_hex": "c02be8c53adba7aebb0accdf3c2059893cce4bed2acdb299a42073a6524ef210",
+      "stream_hex": "1400000000000000"
+    },
+    {
+      "core_hash_hex": "d196beaf118b0c16c696a03cbed73cdc24c77650d368d1dadb1365b0eb008693",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d982"
+      },
+      "input_utf8_preview": "ق",
+      "mode": "A",
+      "name": "gt_021_qaf",
+      "phonetic_hash_hex": "a84817f0b1824d7b3eab038ef55fb90efd8fa6c838cd4682746ddd082344ced7",
+      "stream_hex": "1500000000000000"
+    },
+    {
+      "core_hash_hex": "f0eadc3e579a345aed2466ae6a76ce45f51f75c935bca8c2abe5b320ba76cbf9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d983"
+      },
+      "input_utf8_preview": "ك",
+      "mode": "A",
+      "name": "gt_022_kaf",
+      "phonetic_hash_hex": "530cceea936fca7deed1af342dde53d772f0c8403c77c72bd179a00c4309ab91",
+      "stream_hex": "1600000000000000"
+    },
+    {
+      "core_hash_hex": "9cd171d8b0a55e72f36a50db8b2985fa214a02cceba34e8ade177ac857d67451",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d984"
+      },
+      "input_utf8_preview": "ل",
+      "mode": "A",
+      "name": "gt_023_lam",
+      "phonetic_hash_hex": "af98c451e60da72a91c023ecbd946f70101fbbf6e70c6723c1aee80aa74413d1",
+      "stream_hex": "1700000000000000"
+    },
+    {
+      "core_hash_hex": "8f3d77394ccf902c6f70df2ad941efdb5fba255baec24cd27712be7757a4114e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d985"
+      },
+      "input_utf8_preview": "م",
+      "mode": "A",
+      "name": "gt_024_meem",
+      "phonetic_hash_hex": "3877a876454e0dcec25c6778afe6505e49ded36415af9d6d279c9bd2c98b3a0b",
+      "stream_hex": "1800000000000000"
+    },
+    {
+      "core_hash_hex": "4163ae2243aed7a756f03504fc966e69677299245331d6381be8c45b60511019",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986"
+      },
+      "input_utf8_preview": "ن",
+      "mode": "A",
+      "name": "gt_025_noon",
+      "phonetic_hash_hex": "5dc0e3712d074f51db1c7c41a7c08a7efc320e2523ca294563ffeec0b92ccb19",
+      "stream_hex": "1900000000000000"
+    },
+    {
+      "core_hash_hex": "a20e9ce20a3a68fe0a3e3cffd25d3e2bc484afc8f558e60466fa38e8462d7a1d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d987"
+      },
+      "input_utf8_preview": "ه",
+      "mode": "A",
+      "name": "gt_026_heh",
+      "phonetic_hash_hex": "c7924361547fa16601fd04f58aafc7669e3afc0fc4559682cb22025893f2758a",
+      "stream_hex": "1a00000000000000"
+    },
+    {
+      "core_hash_hex": "34161eaaa10194d217c8726f773fd5e21e9abd0890c8b4e760d7b90b0f64a42a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d988"
+      },
+      "input_utf8_preview": "و",
+      "mode": "A",
+      "name": "gt_027_waw",
+      "phonetic_hash_hex": "41a95e6dae78877b0928ff5172bfb34482bc17824c6ab1768a8dfd74a44daefb",
+      "stream_hex": "1b00000000000000"
+    },
+    {
+      "core_hash_hex": "8aac943540c928674e5b2e38ef9f89c08b80117c051921f7cd83ef933d5d62f8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d98a"
+      },
+      "input_utf8_preview": "ي",
+      "mode": "A",
+      "name": "gt_028_yeh",
+      "phonetic_hash_hex": "4102f81b644d8e0a1b33d0fcb00addafdec8e034e45b6ba2f2b85055afbf1475",
+      "stream_hex": "1c00000000000000"
+    },
+    {
+      "core_hash_hex": "40ab5329ead27ccb742144a6a5e65a19ce73290b4611775cfb8c121030e94f4a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a1"
+      },
+      "input_utf8_preview": "ء",
+      "mode": "A",
+      "name": "gt_029_hamza_standalone",
+      "phonetic_hash_hex": "0bf13928c3674a8a21e9ebbae568504aae7b5eab9216c18e88f2fd025f199510",
+      "stream_hex": "2000000000000000"
+    },
+    {
+      "core_hash_hex": "84f3c632ad9e86ad604f691bd4fd4093fae9dab343944c1eef5797d0a1f702a5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a9"
+      },
+      "input_utf8_preview": "ة",
+      "mode": "A",
+      "name": "gt_030_teh_marbuta",
+      "phonetic_hash_hex": "a56fb07d894f3fa6d260045cf34071e5e6927e6e09986a072c3b881a2bea3d70",
+      "stream_hex": "2100000000000000"
+    },
+    {
+      "core_hash_hex": "cbd7e522708e96087330790a3e2beb03115e545e8788400853c4056450c411cb",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d989"
+      },
+      "input_utf8_preview": "ى",
+      "mode": "A",
+      "name": "gt_031_alef_maqsura",
+      "phonetic_hash_hex": "5c5bd83ca56a56bb940b577afc28d94f1d8c00e7332888cbfe8497f1825d69c9",
+      "stream_hex": "2200000000000000"
+    },
+    {
+      "core_hash_hex": "3f6607dd133e0f7acd1433ad43ec716933ffe6d9ca9a1600dd9b600bc773625b",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9b1"
+      },
+      "input_utf8_preview": "ٱ",
+      "mode": "A",
+      "name": "gt_032_alef_wasla",
+      "phonetic_hash_hex": "9a5f48d509507b5867648912b79be2f620687fbf342c111bf757e5e1bab5e867",
+      "stream_hex": "2300000000000000"
+    },
+    {
+      "core_hash_hex": "ca97a20db16248f8b6568c5ee06ce360103e625b6d78041aa0ede08291500b8a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "20"
+      },
+      "input_utf8_preview": " ",
+      "mode": "A",
+      "name": "gt_033_space",
+      "phonetic_hash_hex": "9b45dad7ecb1006c7d340b506b471be0676db167eb39645d2d15db453d7bd736",
+      "stream_hex": "4000000000000000"
+    },
+    {
+      "core_hash_hex": "dc9f7c6c8bfb9aaf17972a57e3779a5c9641b5e69b2dd86753e9064c39d481f7",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d88c"
+      },
+      "input_utf8_preview": "،",
+      "mode": "A",
+      "name": "gt_034_arabic_comma",
+      "phonetic_hash_hex": "55d12a5157174d02fcce22653122ade471f917201e7e07505acab777d760e102",
+      "stream_hex": "4100000000000000"
+    },
+    {
+      "core_hash_hex": "0bb24516af153ede71049988524a7b475304e33dcb9596dbd3283543de090e37",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d89b"
+      },
+      "input_utf8_preview": "؛",
+      "mode": "A",
+      "name": "gt_035_arabic_semicolon",
+      "phonetic_hash_hex": "87bba06fd8f6d3c4211a6134a83ee2ca626b04eabb21966bdf357a0ec592fbfe",
+      "stream_hex": "4200000000000000"
+    },
+    {
+      "core_hash_hex": "f81df8a526c33f2460563a339e69e7e5fe1b616f4b5eea854ac41bae77d126da",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d89f"
+      },
+      "input_utf8_preview": "؟",
+      "mode": "A",
+      "name": "gt_036_arabic_question",
+      "phonetic_hash_hex": "40e6cbb409e15dfa36e2500d8e6b78cd0b32577a16cf972bed7e910b0c6f63b9",
+      "stream_hex": "4300000000000000"
+    },
+    {
+      "core_hash_hex": "c34769c6cd4bd0221b0c2ef3c28ded9950fdd07d6694bfd64ab6637381ef5b75",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "2e"
+      },
+      "input_utf8_preview": ".",
+      "mode": "A",
+      "name": "gt_037_full_stop",
+      "phonetic_hash_hex": "98336e100b5095fc414b66dbc6c2580c6b1e7ff2c7c993f6e638d6b687fe0caf",
+      "stream_hex": "4400000000000000"
+    },
+    {
+      "core_hash_hex": "5fd4aaa4ccedbc06b519e36afcb89475641db1109992d1ae81ee72b2545b4ba3",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "3a"
+      },
+      "input_utf8_preview": ":",
+      "mode": "A",
+      "name": "gt_038_colon",
+      "phonetic_hash_hex": "6ebcd52298ad5e8004bb9f43ce902e554749d5cdf61bc266366791595d055ec0",
+      "stream_hex": "4500000000000000"
+    },
+    {
+      "core_hash_hex": "4f93316d410538e4cfaca79d3858b4b968911dcf1c1547fad15a58a7fd74b319",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "30"
+      },
+      "input_utf8_preview": "0",
+      "mode": "A",
+      "name": "gt_039_digit0_ascii",
+      "phonetic_hash_hex": "fa358a6b96d1f61f69005c6818bb73585eaaf9361ad1aba8aa7dbaf0c26f9f17",
+      "stream_hex": "0001000000000000"
+    },
+    {
+      "core_hash_hex": "4f93316d410538e4cfaca79d3858b4b968911dcf1c1547fad15a58a7fd74b319",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a0"
+      },
+      "input_utf8_preview": "٠",
+      "mode": "A",
+      "name": "gt_040_digit0_arabic",
+      "phonetic_hash_hex": "fa358a6b96d1f61f69005c6818bb73585eaaf9361ad1aba8aa7dbaf0c26f9f17",
+      "stream_hex": "0001000000000000"
+    },
+    {
+      "core_hash_hex": "4f93316d410538e4cfaca79d3858b4b968911dcf1c1547fad15a58a7fd74b319",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb0"
+      },
+      "input_utf8_preview": "۰",
+      "mode": "A",
+      "name": "gt_041_digit0_extended",
+      "phonetic_hash_hex": "fa358a6b96d1f61f69005c6818bb73585eaaf9361ad1aba8aa7dbaf0c26f9f17",
+      "stream_hex": "0001000000000000"
+    },
+    {
+      "core_hash_hex": "1bb193bf83dbfcd2df724b5be0221c0ed8c702d24fc5e6be09addce53cc91b87",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "31"
+      },
+      "input_utf8_preview": "1",
+      "mode": "A",
+      "name": "gt_042_digit1_ascii",
+      "phonetic_hash_hex": "f5935476ff704c7331bbbbbba15b0e3f873cde55faa1fa39d89c747ebad1e5a9",
+      "stream_hex": "0101000000000000"
+    },
+    {
+      "core_hash_hex": "1bb193bf83dbfcd2df724b5be0221c0ed8c702d24fc5e6be09addce53cc91b87",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a1"
+      },
+      "input_utf8_preview": "١",
+      "mode": "A",
+      "name": "gt_043_digit1_arabic",
+      "phonetic_hash_hex": "f5935476ff704c7331bbbbbba15b0e3f873cde55faa1fa39d89c747ebad1e5a9",
+      "stream_hex": "0101000000000000"
+    },
+    {
+      "core_hash_hex": "1bb193bf83dbfcd2df724b5be0221c0ed8c702d24fc5e6be09addce53cc91b87",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb1"
+      },
+      "input_utf8_preview": "۱",
+      "mode": "A",
+      "name": "gt_044_digit1_extended",
+      "phonetic_hash_hex": "f5935476ff704c7331bbbbbba15b0e3f873cde55faa1fa39d89c747ebad1e5a9",
+      "stream_hex": "0101000000000000"
+    },
+    {
+      "core_hash_hex": "da3d586554e23c32bf2522c9ff591002a39604c7bbe3e1021c960fe142895ca9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "32"
+      },
+      "input_utf8_preview": "2",
+      "mode": "A",
+      "name": "gt_045_digit2_ascii",
+      "phonetic_hash_hex": "bd4ab2b713ac46e2bf8921ada9004909a5202818da5643eacf4bae0f134f3bd8",
+      "stream_hex": "0201000000000000"
+    },
+    {
+      "core_hash_hex": "da3d586554e23c32bf2522c9ff591002a39604c7bbe3e1021c960fe142895ca9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a2"
+      },
+      "input_utf8_preview": "٢",
+      "mode": "A",
+      "name": "gt_046_digit2_arabic",
+      "phonetic_hash_hex": "bd4ab2b713ac46e2bf8921ada9004909a5202818da5643eacf4bae0f134f3bd8",
+      "stream_hex": "0201000000000000"
+    },
+    {
+      "core_hash_hex": "da3d586554e23c32bf2522c9ff591002a39604c7bbe3e1021c960fe142895ca9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb2"
+      },
+      "input_utf8_preview": "۲",
+      "mode": "A",
+      "name": "gt_047_digit2_extended",
+      "phonetic_hash_hex": "bd4ab2b713ac46e2bf8921ada9004909a5202818da5643eacf4bae0f134f3bd8",
+      "stream_hex": "0201000000000000"
+    },
+    {
+      "core_hash_hex": "7e00916713a52523d4500f2cdc174b33949a2073de752e1169ab0dc8e7256a72",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "33"
+      },
+      "input_utf8_preview": "3",
+      "mode": "A",
+      "name": "gt_048_digit3_ascii",
+      "phonetic_hash_hex": "c3c36f616072455b1c67c659de5333a32e87b6c8792d88a4522890dd3bbf071c",
+      "stream_hex": "0301000000000000"
+    },
+    {
+      "core_hash_hex": "7e00916713a52523d4500f2cdc174b33949a2073de752e1169ab0dc8e7256a72",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a3"
+      },
+      "input_utf8_preview": "٣",
+      "mode": "A",
+      "name": "gt_049_digit3_arabic",
+      "phonetic_hash_hex": "c3c36f616072455b1c67c659de5333a32e87b6c8792d88a4522890dd3bbf071c",
+      "stream_hex": "0301000000000000"
+    },
+    {
+      "core_hash_hex": "7e00916713a52523d4500f2cdc174b33949a2073de752e1169ab0dc8e7256a72",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb3"
+      },
+      "input_utf8_preview": "۳",
+      "mode": "A",
+      "name": "gt_050_digit3_extended",
+      "phonetic_hash_hex": "c3c36f616072455b1c67c659de5333a32e87b6c8792d88a4522890dd3bbf071c",
+      "stream_hex": "0301000000000000"
+    },
+    {
+      "core_hash_hex": "40f241863eeceb61fdd699eb75a15ec5d2bc27ae21fa46fcc9687bcb18cc9138",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "34"
+      },
+      "input_utf8_preview": "4",
+      "mode": "A",
+      "name": "gt_051_digit4_ascii",
+      "phonetic_hash_hex": "e4429e147ffad2a1613eb1a60a1631ae5d597f817a1388c15db6f6b95dc2c4ab",
+      "stream_hex": "0401000000000000"
+    },
+    {
+      "core_hash_hex": "40f241863eeceb61fdd699eb75a15ec5d2bc27ae21fa46fcc9687bcb18cc9138",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a4"
+      },
+      "input_utf8_preview": "٤",
+      "mode": "A",
+      "name": "gt_052_digit4_arabic",
+      "phonetic_hash_hex": "e4429e147ffad2a1613eb1a60a1631ae5d597f817a1388c15db6f6b95dc2c4ab",
+      "stream_hex": "0401000000000000"
+    },
+    {
+      "core_hash_hex": "40f241863eeceb61fdd699eb75a15ec5d2bc27ae21fa46fcc9687bcb18cc9138",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb4"
+      },
+      "input_utf8_preview": "۴",
+      "mode": "A",
+      "name": "gt_053_digit4_extended",
+      "phonetic_hash_hex": "e4429e147ffad2a1613eb1a60a1631ae5d597f817a1388c15db6f6b95dc2c4ab",
+      "stream_hex": "0401000000000000"
+    },
+    {
+      "core_hash_hex": "de0abdb12eda178b594dddca3646466589a24f95799e4fe839b154a9c0a407d5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "35"
+      },
+      "input_utf8_preview": "5",
+      "mode": "A",
+      "name": "gt_054_digit5_ascii",
+      "phonetic_hash_hex": "deaf662373337617d58ba004db0bacd53017c7c7f430f3db2523937be52dac72",
+      "stream_hex": "0501000000000000"
+    },
+    {
+      "core_hash_hex": "de0abdb12eda178b594dddca3646466589a24f95799e4fe839b154a9c0a407d5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a5"
+      },
+      "input_utf8_preview": "٥",
+      "mode": "A",
+      "name": "gt_055_digit5_arabic",
+      "phonetic_hash_hex": "deaf662373337617d58ba004db0bacd53017c7c7f430f3db2523937be52dac72",
+      "stream_hex": "0501000000000000"
+    },
+    {
+      "core_hash_hex": "de0abdb12eda178b594dddca3646466589a24f95799e4fe839b154a9c0a407d5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb5"
+      },
+      "input_utf8_preview": "۵",
+      "mode": "A",
+      "name": "gt_056_digit5_extended",
+      "phonetic_hash_hex": "deaf662373337617d58ba004db0bacd53017c7c7f430f3db2523937be52dac72",
+      "stream_hex": "0501000000000000"
+    },
+    {
+      "core_hash_hex": "b8b87face1ef3f46f55189aa1721bae069c037cf464391e587f209e2ac44ddd3",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "36"
+      },
+      "input_utf8_preview": "6",
+      "mode": "A",
+      "name": "gt_057_digit6_ascii",
+      "phonetic_hash_hex": "71ff5f8704b4941167f0ea7e24c4b60a067c40badc0871318d25032911bc800e",
+      "stream_hex": "0601000000000000"
+    },
+    {
+      "core_hash_hex": "b8b87face1ef3f46f55189aa1721bae069c037cf464391e587f209e2ac44ddd3",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a6"
+      },
+      "input_utf8_preview": "٦",
+      "mode": "A",
+      "name": "gt_058_digit6_arabic",
+      "phonetic_hash_hex": "71ff5f8704b4941167f0ea7e24c4b60a067c40badc0871318d25032911bc800e",
+      "stream_hex": "0601000000000000"
+    },
+    {
+      "core_hash_hex": "b8b87face1ef3f46f55189aa1721bae069c037cf464391e587f209e2ac44ddd3",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb6"
+      },
+      "input_utf8_preview": "۶",
+      "mode": "A",
+      "name": "gt_059_digit6_extended",
+      "phonetic_hash_hex": "71ff5f8704b4941167f0ea7e24c4b60a067c40badc0871318d25032911bc800e",
+      "stream_hex": "0601000000000000"
+    },
+    {
+      "core_hash_hex": "87513251a25a7547e406c31a90d2b1e796771bbd9daae7d86ce583a84d3c9934",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "37"
+      },
+      "input_utf8_preview": "7",
+      "mode": "A",
+      "name": "gt_060_digit7_ascii",
+      "phonetic_hash_hex": "dbf27baae20b627568b81bdf7169c8fab33a350848dfdfba4081697a2603276a",
+      "stream_hex": "0701000000000000"
+    },
+    {
+      "core_hash_hex": "87513251a25a7547e406c31a90d2b1e796771bbd9daae7d86ce583a84d3c9934",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a7"
+      },
+      "input_utf8_preview": "٧",
+      "mode": "A",
+      "name": "gt_061_digit7_arabic",
+      "phonetic_hash_hex": "dbf27baae20b627568b81bdf7169c8fab33a350848dfdfba4081697a2603276a",
+      "stream_hex": "0701000000000000"
+    },
+    {
+      "core_hash_hex": "87513251a25a7547e406c31a90d2b1e796771bbd9daae7d86ce583a84d3c9934",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb7"
+      },
+      "input_utf8_preview": "۷",
+      "mode": "A",
+      "name": "gt_062_digit7_extended",
+      "phonetic_hash_hex": "dbf27baae20b627568b81bdf7169c8fab33a350848dfdfba4081697a2603276a",
+      "stream_hex": "0701000000000000"
+    },
+    {
+      "core_hash_hex": "ff3b3bf1ba0a922c06243c6bae0c70cd223a7b19742dfabb29495169e20edf4e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "38"
+      },
+      "input_utf8_preview": "8",
+      "mode": "A",
+      "name": "gt_063_digit8_ascii",
+      "phonetic_hash_hex": "bb22a1997a78e46552210323a9cef3a607f6e49b7c86d37977756ffd069a1a59",
+      "stream_hex": "0801000000000000"
+    },
+    {
+      "core_hash_hex": "ff3b3bf1ba0a922c06243c6bae0c70cd223a7b19742dfabb29495169e20edf4e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a8"
+      },
+      "input_utf8_preview": "٨",
+      "mode": "A",
+      "name": "gt_064_digit8_arabic",
+      "phonetic_hash_hex": "bb22a1997a78e46552210323a9cef3a607f6e49b7c86d37977756ffd069a1a59",
+      "stream_hex": "0801000000000000"
+    },
+    {
+      "core_hash_hex": "ff3b3bf1ba0a922c06243c6bae0c70cd223a7b19742dfabb29495169e20edf4e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb8"
+      },
+      "input_utf8_preview": "۸",
+      "mode": "A",
+      "name": "gt_065_digit8_extended",
+      "phonetic_hash_hex": "bb22a1997a78e46552210323a9cef3a607f6e49b7c86d37977756ffd069a1a59",
+      "stream_hex": "0801000000000000"
+    },
+    {
+      "core_hash_hex": "3573b8843646a901e90000b34fa187b3a4cb8f84d1debdb021278f542de5bc8b",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "39"
+      },
+      "input_utf8_preview": "9",
+      "mode": "A",
+      "name": "gt_066_digit9_ascii",
+      "phonetic_hash_hex": "7f8788346a8e21162b55242f7fc8aa6b30efaabe0634c3b65556522b3017c732",
+      "stream_hex": "0901000000000000"
+    },
+    {
+      "core_hash_hex": "3573b8843646a901e90000b34fa187b3a4cb8f84d1debdb021278f542de5bc8b",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9a9"
+      },
+      "input_utf8_preview": "٩",
+      "mode": "A",
+      "name": "gt_067_digit9_arabic",
+      "phonetic_hash_hex": "7f8788346a8e21162b55242f7fc8aa6b30efaabe0634c3b65556522b3017c732",
+      "stream_hex": "0901000000000000"
+    },
+    {
+      "core_hash_hex": "3573b8843646a901e90000b34fa187b3a4cb8f84d1debdb021278f542de5bc8b",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "dbb9"
+      },
+      "input_utf8_preview": "۹",
+      "mode": "A",
+      "name": "gt_068_digit9_extended",
+      "phonetic_hash_hex": "7f8788346a8e21162b55242f7fc8aa6b30efaabe0634c3b65556522b3017c732",
+      "stream_hex": "0901000000000000"
+    },
+    {
+      "core_hash_hex": "f4226a79f1c62998559c44298ad718388045dc6cd5c096a9bc197175268d2a04",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98e"
+      },
+      "input_utf8_preview": "بَ",
+      "mode": "A",
+      "name": "gt_069_beh_fatha",
+      "phonetic_hash_hex": "97b6eb001215607e9e8424d96893106a648b21f345d06c8819591a481c2b6ec8",
+      "stream_hex": "0200010000000000"
+    },
+    {
+      "core_hash_hex": "ba64bf3ee86b4f5bfaf922913d69c78000f70f15b1b3a644ad2afc6cb57551d9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98f"
+      },
+      "input_utf8_preview": "بُ",
+      "mode": "A",
+      "name": "gt_070_beh_damma",
+      "phonetic_hash_hex": "cdea176dac6e5d3845e8103c53018b3e0301dc4cdb026aee318bac3edde6703b",
+      "stream_hex": "0200020000000000"
+    },
+    {
+      "core_hash_hex": "5757919eb8d95a59965390027fc97477cf250cbf016922b14460da4a16e508e8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d990"
+      },
+      "input_utf8_preview": "بِ",
+      "mode": "A",
+      "name": "gt_071_beh_kasra",
+      "phonetic_hash_hex": "7a7e4e51c108bd69a2de0842eafeed553b8bfc248ab48fb40358f23d801b0d5d",
+      "stream_hex": "0200040000000000"
+    },
+    {
+      "core_hash_hex": "e3598b275d7719c77bb7e179307ce5139007bb3419aed0ddbdd52922ea156c4c",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d992"
+      },
+      "input_utf8_preview": "بْ",
+      "mode": "A",
+      "name": "gt_072_beh_sukun",
+      "phonetic_hash_hex": "2fc0b5baccab517c9b040cf890ea4ed5d6bd019002bf39704e7b2cf7f8968ae5",
+      "stream_hex": "0200080000000000"
+    },
+    {
+      "core_hash_hex": "037b40765af5d9590245c4d481eeecc16f98abbe44805362d393f33318f7a8d9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991"
+      },
+      "input_utf8_preview": "بّ",
+      "mode": "A",
+      "name": "gt_073_beh_shadda",
+      "phonetic_hash_hex": "113d9f31b7e203ba7f5d366e63258d704f8ec0c265fe07a5622445d29885b94a",
+      "stream_hex": "0200100000000000"
+    },
+    {
+      "core_hash_hex": "564c8f3c08e292d38da6768c7c627321ae2606f7465c6088103575d9973c9f52",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d98e"
+      },
+      "input_utf8_preview": "بَّ",
+      "mode": "A",
+      "name": "gt_074_beh_shadda_fatha",
+      "phonetic_hash_hex": "1c5a146e365028d20ebd4ca1f91fe3186c8386d21b3cef9c602c457e47fb441e",
+      "stream_hex": "0200110000000000"
+    },
+    {
+      "core_hash_hex": "42c1e4866056f06716485cc1d6c2435c3ff5140952306ee13f4e67bfa3021885",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d98f"
+      },
+      "input_utf8_preview": "بُّ",
+      "mode": "A",
+      "name": "gt_075_beh_shadda_damma",
+      "phonetic_hash_hex": "b7127d87f5adac41c5136f5e7946784ec2e216a37a0e217b74e112208f1eeae2",
+      "stream_hex": "0200120000000000"
+    },
+    {
+      "core_hash_hex": "12b43f632ef216f099dfacac2f2bf4fcc00fe0df35ba356c50761faf7e5542f6",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d990"
+      },
+      "input_utf8_preview": "بِّ",
+      "mode": "A",
+      "name": "gt_076_beh_shadda_kasra",
+      "phonetic_hash_hex": "f48927063131965cfa739a15f4661fec383fc06934f4395e86a4991f64fd13b6",
+      "stream_hex": "0200140000000000"
+    },
+    {
+      "core_hash_hex": "6ae77f2ac3e48abba85030a92cede55e78ce0728acf47bd36df66ef2031d472e",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a3"
+      },
+      "input_utf8_preview": "أ",
+      "mode": "A",
+      "name": "gt_080_alef_hamza_above",
+      "phonetic_hash_hex": "b7547fe8da2464b3f3067a1638bad055ba64a11bc3e9360fd0b6a37801f87354",
+      "stream_hex": "0100000001000000"
+    },
+    {
+      "core_hash_hex": "3e22aaeb7b98c831836c883eb194a2f91a11ea3e7ba00c42f474f9b0dce931d5",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a4"
+      },
+      "input_utf8_preview": "ؤ",
+      "mode": "A",
+      "name": "gt_081_waw_hamza_above",
+      "phonetic_hash_hex": "4d2562d75445b3e8ba27f543f53b97b97bc86c75454edb71c113c44824a2a116",
+      "stream_hex": "1b00000001000000"
+    },
+    {
+      "core_hash_hex": "463009337640b3ffd2df0ce03bd5ad8d1d89b9869da70895d8f2927a69bafc70",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a6"
+      },
+      "input_utf8_preview": "ئ",
+      "mode": "A",
+      "name": "gt_082_yeh_hamza_above",
+      "phonetic_hash_hex": "4a3c86269dca0f8e350a95d575b2e907eb44d9b59c512d3f7c97aedfaa017cf4",
+      "stream_hex": "1c00000001000000"
+    },
+    {
+      "core_hash_hex": "d7f1f24cbca0fd837734f5974b2cb7bfc0a831b21da672b7bd422725c37aff03",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a5"
+      },
+      "input_utf8_preview": "إ",
+      "mode": "A",
+      "name": "gt_083_alef_hamza_below",
+      "phonetic_hash_hex": "bab7d3d1d265c65ea99d63e3018879f0c1e4894943eb020021d8feda5ec5782b",
+      "stream_hex": "0100000002000000"
+    },
+    {
+      "core_hash_hex": "184a6f37b8844558d161499651f40097a5a3d8a5f45644d3ca885b51c60ebb4b",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a2"
+      },
+      "input_utf8_preview": "آ",
+      "mode": "A",
+      "name": "gt_084_alef_madda",
+      "phonetic_hash_hex": "d44d852e33d39894a32f4a343edf667ba37e781da2fc6ce7a57f1fd78b2361aa",
+      "stream_hex": "0100000004000000"
+    },
+    {
+      "core_hash_hex": "8d542403ad24d72bbbbdede74fcf34ce3130c5f92b4238548bc4158da86f0510",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a3d98e"
+      },
+      "input_utf8_preview": "أَ",
+      "mode": "A",
+      "name": "gt_085_alef_hamza_above_fatha",
+      "phonetic_hash_hex": "3728e311c6fe1089cfd16c0a54ffce4e9711f6c06ba98bd9e549a66f19138a0c",
+      "stream_hex": "0100010001000000"
+    },
+    {
+      "core_hash_hex": "6cb01441429e872899444716921b732bd4300dd7acfc6a71f1e6c4b1da4bf77c",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a5d990"
+      },
+      "input_utf8_preview": "إِ",
+      "mode": "A",
+      "name": "gt_086_alef_hamza_below_kasra",
+      "phonetic_hash_hex": "239f97b0398e61075090616bd04b9a1bbb37318fcbad43989b490411c481dbdd",
+      "stream_hex": "0100040002000000"
+    },
+    {
+      "core_hash_hex": "4163ae2243aed7a756f03504fc966e69677299245331d6381be8c45b60511019",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986d98b"
+      },
+      "input_utf8_preview": "نً",
+      "mode": "A",
+      "name": "gt_088_noon_tanween_fath",
+      "phonetic_hash_hex": "e6f46a21a00fb4966ec0084a75b6c81590c3d44486ab54a84fcde7b9e74c192f",
+      "stream_hex": "1900000000010000"
+    },
+    {
+      "core_hash_hex": "4163ae2243aed7a756f03504fc966e69677299245331d6381be8c45b60511019",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986d98c"
+      },
+      "input_utf8_preview": "نٌ",
+      "mode": "A",
+      "name": "gt_089_noon_tanween_damm",
+      "phonetic_hash_hex": "39a03d845441245090a8f468f0da02a5fb71a361e28102b3ceb2f294e41ab1ab",
+      "stream_hex": "1900000000020000"
+    },
+    {
+      "core_hash_hex": "4163ae2243aed7a756f03504fc966e69677299245331d6381be8c45b60511019",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986d98d"
+      },
+      "input_utf8_preview": "نٍ",
+      "mode": "A",
+      "name": "gt_090_noon_tanween_kasr",
+      "phonetic_hash_hex": "ce8c6fbd0d43b8bca4fbcb900d22cd423e33cc03f387d26ef9c4a0d368879f8e",
+      "stream_hex": "1900000000040000"
+    },
+    {
+      "core_hash_hex": "037b40765af5d9590245c4d481eeecc16f98abbe44805362d393f33318f7a8d9",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d98c"
+      },
+      "input_utf8_preview": "بٌّ",
+      "mode": "A",
+      "name": "gt_091_beh_shadda_tanween_damm",
+      "phonetic_hash_hex": "5881b86dba974fb16851db6473ad011008e4512b67d39d7d8cffa63779dd7bbc",
+      "stream_hex": "0200100000020000"
+    },
+    {
+      "core_hash_hex": "34161eaaa10194d217c8726f773fd5e21e9abd0890c8b4e760d7b90b0f64a42a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d988d9b0"
+      },
+      "input_utf8_preview": "وٰ",
+      "mode": "A",
+      "name": "gt_096_waw_superscript_alef",
+      "phonetic_hash_hex": "0b11617a57e4c6ad3eefb88d294442339dc5b4aaab25fc2cb061092a770af912",
+      "stream_hex": "1b00000000200000"
+    },
+    {
+      "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a7d9b0"
+      },
+      "input_utf8_preview": "اٰ",
+      "mode": "A",
+      "name": "gt_097_alef_superscript_alef",
+      "phonetic_hash_hex": "fa2325a6ddbe50436011899fec0805daa25d2ebf91903662d1d48d7a47ba0fb1",
+      "stream_hex": "0100000000200000"
+    },
+    {
+      "core_hash_hex": "358f2811e2bc73e4c8456140e3e0e382650656f941bc6fceb69fae0c0e0ff1bd",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d990d8b3d992d985d990"
+      },
+      "input_utf8_preview": "بِسْمِ",
+      "mode": "A",
+      "name": "gt_098_bismi",
+      "phonetic_hash_hex": "56dd2236e94a385f925b49085953aacc7c5e8455c275dd536353463462cf29e3",
+      "stream_hex": "02000400000000000c000800000000001800040000000000"
+    },
+    {
+      "core_hash_hex": "402b6c8b13295c3eb313892366f81c2be02e12d9172b9eafb625757de3cf57f0",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9b1d984d984d991d98ed987"
+      },
+      "input_utf8_preview": "ٱللَّه",
+      "mode": "A",
+      "name": "gt_099_allah",
+      "phonetic_hash_hex": "45b9f356ff4f0cb173bf10c612bc1a4796ae3b9bf0bc541cb856819e52cfb6a2",
+      "stream_hex": "2300000000000000170000000000000017001100000000001a00000000000000"
+    },
+    {
+      "core_hash_hex": "b9ef80cd36fdf5ee03806192aa9b78b2454b36c8fb28a0a2517134679eb0a6f6",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a7d984d992d982d98fd8b1d992d8a2d986d98f"
+      },
+      "input_utf8_preview": "الْقُرْآنُ",
+      "mode": "A",
+      "name": "gt_101_al_quran",
+      "phonetic_hash_hex": "b053d80654a3d87e0c11b16a607ce632d46d2aa9c2c6f588eb914bc9d2319e22",
+      "stream_hex": "0100000000000000170008000000000015000200000000000a0008000000000001000000040000001900020000000000"
+    },
+    {
+      "core_hash_hex": "eb458c1d9f569a53358298b4412db0949d86c20294e4bf8fa97a3fbcda41b55f",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbb"
+      },
+      "input_utf8_preview": "ﻻ",
+      "mode": "A",
+      "name": "gt_103_lam_alef_isolated",
+      "phonetic_hash_hex": "d5b1ac75ce324a3716d36d15a675a6d709375a701c7998d566e3f30b006c3fca",
+      "stream_hex": "17000000000000000100000000000000"
+    },
+    {
+      "core_hash_hex": "eb458c1d9f569a53358298b4412db0949d86c20294e4bf8fa97a3fbcda41b55f",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbc"
+      },
+      "input_utf8_preview": "ﻼ",
+      "mode": "A",
+      "name": "gt_104_lam_alef_final",
+      "phonetic_hash_hex": "d5b1ac75ce324a3716d36d15a675a6d709375a701c7998d566e3f30b006c3fca",
+      "stream_hex": "17000000000000000100000000000000"
+    },
+    {
+      "core_hash_hex": "bd8779e9bea8fd5d0b0b06c17127ed97cfc8f676863cc508620243cdaa50813d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb5"
+      },
+      "input_utf8_preview": "ﻵ",
+      "mode": "A",
+      "name": "gt_105_lam_alef_madda_isolated",
+      "phonetic_hash_hex": "51d512845188314a9199aaebaaf3029118e145c50afcd8078bcf914d6e1a9932",
+      "stream_hex": "17000000000000000100000004000000"
+    },
+    {
+      "core_hash_hex": "bd8779e9bea8fd5d0b0b06c17127ed97cfc8f676863cc508620243cdaa50813d",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb6"
+      },
+      "input_utf8_preview": "ﻶ",
+      "mode": "A",
+      "name": "gt_106_lam_alef_madda_final",
+      "phonetic_hash_hex": "51d512845188314a9199aaebaaf3029118e145c50afcd8078bcf914d6e1a9932",
+      "stream_hex": "17000000000000000100000004000000"
+    },
+    {
+      "core_hash_hex": "907d5326720a7e7d32cea0eb22ec05b4c887b68eafbbf96a854aab8992de87aa",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb7"
+      },
+      "input_utf8_preview": "ﻷ",
+      "mode": "A",
+      "name": "gt_107_lam_alef_hamza_above_isolated",
+      "phonetic_hash_hex": "baf1a5eaf63948d4b11f813967013421aa135e89572cc19264f2404321914c00",
+      "stream_hex": "17000000000000000100000001000000"
+    },
+    {
+      "core_hash_hex": "907d5326720a7e7d32cea0eb22ec05b4c887b68eafbbf96a854aab8992de87aa",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb8"
+      },
+      "input_utf8_preview": "ﻸ",
+      "mode": "A",
+      "name": "gt_108_lam_alef_hamza_above_final",
+      "phonetic_hash_hex": "baf1a5eaf63948d4b11f813967013421aa135e89572cc19264f2404321914c00",
+      "stream_hex": "17000000000000000100000001000000"
+    },
+    {
+      "core_hash_hex": "6477d5c298da787e421eaa83f2442ed5f271dd1bf035fc5a0d5303c2d5c11c74",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb9"
+      },
+      "input_utf8_preview": "ﻹ",
+      "mode": "A",
+      "name": "gt_109_lam_alef_hamza_below_isolated",
+      "phonetic_hash_hex": "dfb3bd80f5b1f0b742a250fa8fa4d72948e682945923ede8fa24d9ac23f72b53",
+      "stream_hex": "17000000000000000100000002000000"
+    },
+    {
+      "core_hash_hex": "6477d5c298da787e421eaa83f2442ed5f271dd1bf035fc5a0d5303c2d5c11c74",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbba"
+      },
+      "input_utf8_preview": "ﻺ",
+      "mode": "A",
+      "name": "gt_110_lam_alef_hamza_below_final",
+      "phonetic_hash_hex": "dfb3bd80f5b1f0b742a250fa8fa4d72948e682945923ede8fa24d9ac23f72b53",
+      "stream_hex": "17000000000000000100000002000000"
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efba8f"
+      },
+      "input_utf8_preview": "ﺏ",
+      "mode": "A",
+      "name": "gt_111_beh_isolated",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efba90"
+      },
+      "input_utf8_preview": "ﺐ",
+      "mode": "A",
+      "name": "gt_112_beh_final",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efba91"
+      },
+      "input_utf8_preview": "ﺑ",
+      "mode": "A",
+      "name": "gt_113_beh_initial",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efba92"
+      },
+      "input_utf8_preview": "ﺒ",
+      "mode": "A",
+      "name": "gt_114_beh_medial",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "8aac943540c928674e5b2e38ef9f89c08b80117c051921f7cd83ef933d5d62f8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbb1"
+      },
+      "input_utf8_preview": "ﻱ",
+      "mode": "A",
+      "name": "gt_115_yeh_isolated",
+      "phonetic_hash_hex": "4102f81b644d8e0a1b33d0fcb00addafdec8e034e45b6ba2f2b85055afbf1475",
+      "stream_hex": "1c00000000000000"
+    },
+    {
+      "core_hash_hex": "cbd7e522708e96087330790a3e2beb03115e545e8788400853c4056450c411cb",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbaf"
+      },
+      "input_utf8_preview": "ﻯ",
+      "mode": "A",
+      "name": "gt_116_alef_maqsura_isolated",
+      "phonetic_hash_hex": "5c5bd83ca56a56bb940b577afc28d94f1d8c00e7332888cbfe8497f1825d69c9",
+      "stream_hex": "2200000000000000"
+    },
+    {
+      "core_hash_hex": "ca97a20db16248f8b6568c5ee06ce360103e625b6d78041aa0ede08291500b8a",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "20"
+      },
+      "input_utf8_preview": " ",
+      "mode": "A",
+      "name": "gt_118_single_space",
+      "phonetic_hash_hex": "9b45dad7ecb1006c7d340b506b471be0676db167eb39645d2d15db453d7bd736",
+      "stream_hex": "4000000000000000"
+    },
+    {
+      "core_hash_hex": "8dd837c60eff174e0f40e75636deedec4bf020751f97cfe10dd1cf7117b16be0",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d980e2808defbbbf"
+      },
+      "input_utf8_preview": "ـ‍﻿",
+      "mode": "A",
+      "name": "gt_119_noise_only_empty",
+      "phonetic_hash_hex": "c5f62e920f5b06c74a02f25341f63499f1132da19084eb38e7b806c4a60a03f7",
+      "stream_hex": ""
+    },
+    {
+      "core_hash_hex": "4cd5488d16f55023d7a6816009777bac5297dbb57a0f5315085693a1dfb438ac",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbfd8a8"
+      },
+      "input_utf8_preview": "﻿ب",
+      "mode": "A",
+      "name": "gt_120_bom_then_beh",
+      "phonetic_hash_hex": "2e5317b842f738a15e3aaf04cb527e61cb7979a44ac1c99f6a4b464fb50056a3",
+      "stream_hex": "0200000000000000"
+    },
+    {
+      "core_hash_hex": "2bc5f004b12841e940801c597523f5219e9445b2f775bca8cb3f9bf1b5976469",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8e2808dd8a8"
+      },
+      "input_utf8_preview": "ب‍ب",
+      "mode": "A",
+      "name": "gt_121_zwj_between_letters",
+      "phonetic_hash_hex": "25cd4d351e4aa48997e849365b94350eb9f824ba4484e46c5a668430d205a6d6",
+      "stream_hex": "02000000000000000200000000000000"
+    },
+    {
+      "core_hash_hex": "2bc5f004b12841e940801c597523f5219e9445b2f775bca8cb3f9bf1b5976469",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d980d8a8"
+      },
+      "input_utf8_preview": "بـب",
+      "mode": "A",
+      "name": "gt_122_kashida_filtered",
+      "phonetic_hash_hex": "25cd4d351e4aa48997e849365b94350eb9f824ba4484e46c5a668430d205a6d6",
+      "stream_hex": "02000000000000000200000000000000"
+    },
+    {
+      "core_hash_hex": "2bc5f004b12841e940801c597523f5219e9445b2f775bca8cb3f9bf1b5976469",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8efb880d8a8"
+      },
+      "input_utf8_preview": "ب︀ب",
+      "mode": "A",
+      "name": "gt_123_variation_selector_filtered",
+      "phonetic_hash_hex": "25cd4d351e4aa48997e849365b94350eb9f824ba4484e46c5a668430d205a6d6",
+      "stream_hex": "02000000000000000200000000000000"
+    },
+    {
+      "core_hash_hex": "2bc5f004b12841e940801c597523f5219e9445b2f775bca8cb3f9bf1b5976469",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8e2808fd8a8"
+      },
+      "input_utf8_preview": "ب‏ب",
+      "mode": "A",
+      "name": "gt_124_rtl_mark_filtered",
+      "phonetic_hash_hex": "25cd4d351e4aa48997e849365b94350eb9f824ba4484e46c5a668430d205a6d6",
+      "stream_hex": "02000000000000000200000000000000"
+    },
+    {
+      "core_hash_hex": "564c8f3c08e292d38da6768c7c627321ae2606f7465c6088103575d9973c9f52",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98ed991"
+      },
+      "input_utf8_preview": "بَّ",
+      "mode": "A",
+      "name": "gt_125_mark_order_a",
+      "phonetic_hash_hex": "1c5a146e365028d20ebd4ca1f91fe3186c8386d21b3cef9c602c457e47fb441e",
+      "stream_hex": "0200110000000000"
+    },
+    {
+      "core_hash_hex": "564c8f3c08e292d38da6768c7c627321ae2606f7465c6088103575d9973c9f52",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d98e"
+      },
+      "input_utf8_preview": "بَّ",
+      "mode": "A",
+      "name": "gt_126_mark_order_b",
+      "phonetic_hash_hex": "1c5a146e365028d20ebd4ca1f91fe3186c8386d21b3cef9c602c457e47fb441e",
+      "stream_hex": "0200110000000000"
+    }
+  ]
 }

@@ -1,6 +1,572 @@
 {
+  "dhad_spec": "v1.0+CR-01..CR-07",
+  "generated_by": "dhad-rust-1.1.2",
+  "mode": "A",
   "schema_version": "1.0",
-  "dhad_spec": "v1.0+CR-07",
-  "generated_by": "bootstrap-manual",
-  "vectors": []
+  "source_suite": "tests/suite3_adversarial.rs",
+  "suite": "adversarial",
+  "vector_count": 39,
+  "vectors": [
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "c141"
+      },
+      "mode": "A",
+      "name": "at_001_overlong_2byte"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e08141"
+      },
+      "mode": "A",
+      "name": "at_002_overlong_3byte"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "80"
+      },
+      "mode": "A",
+      "name": "at_003_isolated_cont"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8"
+      },
+      "mode": "A",
+      "name": "at_004_truncated_2byte"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e280"
+      },
+      "mode": "A",
+      "name": "at_005_truncated_3byte"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "fe"
+      },
+      "mode": "A",
+      "name": "at_006_invalid_lead_fe"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "ff"
+      },
+      "mode": "A",
+      "name": "at_007_invalid_lead_ff"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "eda080"
+      },
+      "mode": "A",
+      "name": "at_008_surrogate_d800"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "edbfbf"
+      },
+      "mode": "A",
+      "name": "at_009_surrogate_dfff"
+    },
+    {
+      "error": {
+        "byte_offset": 0,
+        "kind": "MalformedUtf8"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "f4908080"
+      },
+      "mode": "A",
+      "name": "at_010_above_10ffff"
+    },
+    {
+      "error": {
+        "codepoint": 65,
+        "kind": "UnmappedCodepoint",
+        "position": 1
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a841d8a8"
+      },
+      "input_utf8_preview": "بAب",
+      "mode": "A",
+      "name": "at_011_latin_a_in_context"
+    },
+    {
+      "error": {
+        "codepoint": 945,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "ceb1"
+      },
+      "input_utf8_preview": "α",
+      "mode": "A",
+      "name": "at_012_greek_alpha"
+    },
+    {
+      "error": {
+        "codepoint": 20013,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e4b8ad"
+      },
+      "input_utf8_preview": "中",
+      "mode": "A",
+      "name": "at_013_cjk"
+    },
+    {
+      "error": {
+        "codepoint": 57344,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "ee8080"
+      },
+      "input_utf8_preview": "",
+      "mode": "A",
+      "name": "at_014_pua"
+    },
+    {
+      "error": {
+        "codepoint": 10400,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e2a2a0"
+      },
+      "input_utf8_preview": "⢠",
+      "mode": "A",
+      "name": "at_015_arabic_ext_a"
+    },
+    {
+      "error": {
+        "codepoint": 1740,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "db8c"
+      },
+      "input_utf8_preview": "ی",
+      "mode": "A",
+      "name": "at_016_farsi_yeh"
+    },
+    {
+      "error": {
+        "codepoint": 1614,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d98e"
+      },
+      "input_utf8_preview": "َ",
+      "mode": "A",
+      "name": "at_017_orphan_fatha"
+    },
+    {
+      "error": {
+        "codepoint": 1617,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d991"
+      },
+      "input_utf8_preview": "ّ",
+      "mode": "A",
+      "name": "at_018_orphan_shadda"
+    },
+    {
+      "error": {
+        "codepoint": 1611,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d98b"
+      },
+      "input_utf8_preview": "ً",
+      "mode": "A",
+      "name": "at_019_orphan_tanween_fath"
+    },
+    {
+      "error": {
+        "codepoint": 1648,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d9b0"
+      },
+      "input_utf8_preview": "ٰ",
+      "mode": "A",
+      "name": "at_020_orphan_super_alef"
+    },
+    {
+      "error": {
+        "codepoint": 1614,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d98ed98e"
+      },
+      "input_utf8_preview": "ََ",
+      "mode": "A",
+      "name": "at_021_double_fatha_orphan"
+    },
+    {
+      "error": {
+        "codepoint": 1614,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbfd98e"
+      },
+      "input_utf8_preview": "﻿َ",
+      "mode": "A",
+      "name": "at_022_bom_then_fatha"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 3
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98ed98f"
+      },
+      "input_utf8_preview": "بَُ",
+      "mode": "A",
+      "name": "at_023_fatha_damma"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 12
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d990d992"
+      },
+      "input_utf8_preview": "بِْ",
+      "mode": "A",
+      "name": "at_024_kasra_sukun"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 24
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d991d992"
+      },
+      "input_utf8_preview": "بّْ",
+      "mode": "A",
+      "name": "at_025_shadda_sukun"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 5
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98ed990"
+      },
+      "input_utf8_preview": "بَِ",
+      "mode": "A",
+      "name": "at_026_fatha_kasra"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 3
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98ed98fd990"
+      },
+      "input_utf8_preview": "بَُِ",
+      "mode": "A",
+      "name": "at_027_three_diacritics"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 2
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "20d98f"
+      },
+      "input_utf8_preview": " ُ",
+      "mode": "A",
+      "name": "at_028_damma_on_space"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 1
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "31d98e"
+      },
+      "input_utf8_preview": "1َ",
+      "mode": "A",
+      "name": "at_029_fatha_on_digit"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 1,
+        "reason": "TANWEEN_FATH and FATHA are contradictory"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986d98ed98b"
+      },
+      "input_utf8_preview": "نًَ",
+      "mode": "A",
+      "name": "at_036_tanween_fath_plus_fatha"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 1,
+        "reason": "Prosody cannot attach to PROSODY_INERT_CLASS"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "20d98b"
+      },
+      "input_utf8_preview": " ً",
+      "mode": "A",
+      "name": "at_040_tanween_fath_on_space"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 1,
+        "reason": "duplicate prosody mark on same atom"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d986d98bd98b"
+      },
+      "input_utf8_preview": "نًً",
+      "mode": "A",
+      "name": "at_new_duplicate_tanween_fath_same_atom"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 32,
+        "reason": "duplicate prosody mark on same atom"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a7d9b0d9b0"
+      },
+      "input_utf8_preview": "اٰٰ",
+      "mode": "A",
+      "name": "at_new_duplicate_superscript_alef_same_atom"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 32,
+        "reason": "U+0670 SUPERSCRIPT_ALEF cannot attach to a structural or digit atom"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "20d9b0"
+      },
+      "input_utf8_preview": " ٰ",
+      "mode": "A",
+      "name": "at_041_superscript_alef_after_space"
+    },
+    {
+      "error": {
+        "kind": "InputTooLarge"
+      },
+      "expected_result": "err",
+      "input": {
+        "byte_hex": "d8",
+        "count": 4194305,
+        "encoding": "repeat_byte"
+      },
+      "mode": "A",
+      "name": "at_042_oversized_input"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 1
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98ed98e"
+      },
+      "mode": "A",
+      "name": "at_043_diacritic_flood"
+    },
+    {
+      "core_hash_hex": "970a22c9c61a1f9baae342a4707a75ae6657657723623ed42db8035db20821a8",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbbefbbbcefbbb5efbbb6efbbb7efbbb8efbbb9efbbba"
+      },
+      "input_utf8_preview": "ﻻﻼﻵﻶﻷﻸﻹﻺ",
+      "mode": "A",
+      "name": "at_044_all_lam_alef_variants",
+      "phonetic_hash_hex": "9bfd01f45834be69a9527d9b70882a5ba6e6ab3f8ce1a3c6b259a5b05d3d94bd",
+      "stream_hex": "1700000000000000010000000000000017000000000000000100000000000000170000000000000001000000040000001700000000000000010000000400000017000000000000000100000001000000170000000000000001000000010000001700000000000000010000000200000017000000000000000100000002000000"
+    },
+    {
+      "core_hash_hex": "0fb2277838219bbb6fa949b0ddecb22bf25c69161168022a801b032b41f23ac3",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8e2808dd8b3e2808dd985"
+      },
+      "input_utf8_preview": "ب‍س‍م",
+      "mode": "A",
+      "name": "at_045_zwj_injection_bismi",
+      "phonetic_hash_hex": "12a5a9738a06de8b2abd74637ae4efa3c52b29e3aba8b702bb26715fe6df7cf4",
+      "stream_hex": "02000000000000000c000000000000001800000000000000"
+    },
+    {
+      "core_hash_hex": "a94b75e97b7b88f1cabe3547784d1d6c65558263dab844225c14d8583f2dee40",
+      "expected_result": "ok",
+      "input": {
+        "encoding": "hex",
+        "hex": "e280aed8a8d8a7d8a8"
+      },
+      "input_utf8_preview": "‮باب",
+      "mode": "A",
+      "name": "at_046_bidi_rlo_attack",
+      "phonetic_hash_hex": "495c2f30739a11b02392c39ef60eb863a0a227604632312bac0c06d2e96c3094",
+      "stream_hex": "020000000000000001000000000000000200000000000000"
+    }
+  ]
 }
