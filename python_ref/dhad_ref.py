@@ -154,7 +154,7 @@ def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
             "InvalidProsody",
             prosody=prosody,
             atom_index=atom_index,
-            reason="Conflicting TANWEEN bits cannot coexist",
+            reason="TANWEEN_FATH and TANWEEN_DAMM are mutually exclusive",
         )
 
     if madd_bits == (MADD_NORMAL | MADD_EXTENDED):
@@ -162,7 +162,7 @@ def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
             "InvalidProsody",
             prosody=prosody,
             atom_index=atom_index,
-            reason="MADD_NORMAL and MADD_EXTENDED cannot coexist",
+            reason="MADD_NORMAL and MADD_EXTENDED are mutually exclusive",
         )
 
     if madd_bits and atom.base not in LONG_VOWEL_CLASS:
@@ -208,7 +208,7 @@ def process_mode_b_ref(frame: bytes) -> RefResult:
         return err("InputTooLarge")
 
     if len(frame) < 14:
-        return err("MalformedUtf8", byte_offset=len(frame))
+        return err("MalformedUtf8", byte_offset=0)
 
     if frame[0:4] != MAGIC:
         return err("MalformedUtf8", byte_offset=0)
@@ -220,10 +220,18 @@ def process_mode_b_ref(frame: bytes) -> RefResult:
         return err("MalformedUtf8", byte_offset=5)
 
     n_atoms = struct.unpack("<I", frame[6:10])[0]
-    expected_size = 10 + (n_atoms * 8) + 4
+
+    # Guard against overflow: if n_atoms * 8 would exceed frame length,
+    # report at byte_offset=6 (location of n_atoms field), matching Rust.
+    try:
+        atom_bytes = n_atoms * 8
+    except OverflowError:
+        return err("MalformedUtf8", byte_offset=6)
+
+    expected_size = 10 + atom_bytes + 4
 
     if expected_size != len(frame):
-        return err("MalformedUtf8", byte_offset=10)
+        return err("MalformedUtf8", byte_offset=6)
 
     data = frame[:-4]
     crc_expected = struct.unpack("<I", frame[-4:])[0]

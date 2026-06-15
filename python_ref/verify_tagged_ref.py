@@ -25,6 +25,12 @@ def decode_input(input_obj: dict) -> bytes:
     raise AssertionError(f"unsupported input encoding: {enc}")
 
 
+def error_to_object(err: RefError) -> dict:
+    obj = {"kind": err.kind}
+    obj.update(err.fields)
+    return obj
+
+
 def main() -> int:
     data = json.loads(VECTORS_PATH.read_text(encoding="utf-8"))
     vectors = data["vectors"]
@@ -64,24 +70,27 @@ def main() -> int:
             passed += 1
             continue
 
-        # Phase 1: exact error kind parity only.
         if not isinstance(result, RefError):
             failed.append((v["name"], "expected err, got ok"))
             continue
 
-        expected_kind = v["error"]["kind"]
-        if result.kind != expected_kind:
+        got_error = error_to_object(result)
+        expected_error = v["error"]
+
+        if got_error != expected_error:
             failed.append(
                 (
                     v["name"],
-                    f"error kind mismatch: expected {expected_kind}, got {result.kind}",
+                    "error object mismatch:\n"
+                    f"    expected: {json.dumps(expected_error, ensure_ascii=False, sort_keys=True)}\n"
+                    f"    got:      {json.dumps(got_error, ensure_ascii=False, sort_keys=True)}",
                 )
             )
             continue
 
         passed += 1
 
-    print(f"tagged.json: {passed}/{total} vectors matched in Phase 1")
+    print(f"tagged.json: {passed}/{total} vectors matched in Phase 2")
 
     if failed:
         print("\nFAILURES:")
@@ -90,7 +99,7 @@ def main() -> int:
         print(f"\nTotal failures: {len(failed)}")
         return 1
 
-    print("ALL TAGGED VECTORS MATCH (Phase 1: exact ok outputs + error kind parity)")
+    print("ALL TAGGED VECTORS MATCH (Phase 2: exact ok outputs + full error object parity)")
     return 0
 
 
