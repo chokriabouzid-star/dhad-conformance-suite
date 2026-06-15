@@ -4,7 +4,7 @@ import json
 import struct
 from pathlib import Path
 
-ROOT = Path("vectors")
+ROOT = Path(__file__).resolve().parent.parent / "vectors"
 
 EXPECTED_FILES = {
     "golden.json": {"suite": "golden", "mode": "A", "count": 116},
