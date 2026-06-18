@@ -136,7 +136,7 @@ schema defined
 corpus populated
 Python verifier present
 cross-language hash verification complete
-full Python protocol reimplementation not yet added
+full Python protocol reimplementation complete (185/185 match)
 This repository does not replace the Dhad specification.
 It carries conformance artifacts for independent implementations.
 
