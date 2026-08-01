@@ -75,9 +75,9 @@ Schema version:
 
 - `1.0`
 
-Dhad spec revision described by the corpus:
+Normative Dhad specification:
 
-- `v1.0+CR-01..CR-07`
+- https://github.com/chokriabouzid-star/dhad/blob/main/specification.md
 
 ---
 
