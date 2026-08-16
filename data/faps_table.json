@@ -1,0 +1,871 @@
+{
+  "schema_version": "1.0",
+  "title": "Dhad FAPS (Arabic Presentation Forms) canonical decomposition table",
+  "description": "Complete Stage-3 mapping referenced by specification.md Stage 3. Each 'presentation' codepoint decomposes to one or two 'canonical' codepoints, consumed left-to-right by the pipeline before Stage 4 (noise filtering).",
+  "source_commit": "extracted programmatically from src/faps.rs, dhad repository",
+  "total": 141,
+  "single_codepoint_count": 127,
+  "two_codepoint_count": 14,
+  "entries": [
+    {
+      "presentation": "U+FB50",
+      "canonical": [
+        "U+0671"
+      ]
+    },
+    {
+      "presentation": "U+FB51",
+      "canonical": [
+        "U+0671"
+      ]
+    },
+    {
+      "presentation": "U+FE70",
+      "canonical": [
+        "U+064B"
+      ]
+    },
+    {
+      "presentation": "U+FE71",
+      "canonical": [
+        "U+0640",
+        "U+064B"
+      ]
+    },
+    {
+      "presentation": "U+FE72",
+      "canonical": [
+        "U+064C"
+      ]
+    },
+    {
+      "presentation": "U+FE74",
+      "canonical": [
+        "U+064D"
+      ]
+    },
+    {
+      "presentation": "U+FE76",
+      "canonical": [
+        "U+064E"
+      ]
+    },
+    {
+      "presentation": "U+FE77",
+      "canonical": [
+        "U+0640",
+        "U+064E"
+      ]
+    },
+    {
+      "presentation": "U+FE78",
+      "canonical": [
+        "U+064F"
+      ]
+    },
+    {
+      "presentation": "U+FE79",
+      "canonical": [
+        "U+0640",
+        "U+064F"
+      ]
+    },
+    {
+      "presentation": "U+FE7A",
+      "canonical": [
+        "U+0650"
+      ]
+    },
+    {
+      "presentation": "U+FE7B",
+      "canonical": [
+        "U+0640",
+        "U+0650"
+      ]
+    },
+    {
+      "presentation": "U+FE7C",
+      "canonical": [
+        "U+0651"
+      ]
+    },
+    {
+      "presentation": "U+FE7D",
+      "canonical": [
+        "U+0640",
+        "U+0651"
+      ]
+    },
+    {
+      "presentation": "U+FE7E",
+      "canonical": [
+        "U+0652"
+      ]
+    },
+    {
+      "presentation": "U+FE7F",
+      "canonical": [
+        "U+0640",
+        "U+0652"
+      ]
+    },
+    {
+      "presentation": "U+FE80",
+      "canonical": [
+        "U+0621"
+      ]
+    },
+    {
+      "presentation": "U+FE81",
+      "canonical": [
+        "U+0622"
+      ]
+    },
+    {
+      "presentation": "U+FE82",
+      "canonical": [
+        "U+0622"
+      ]
+    },
+    {
+      "presentation": "U+FE83",
+      "canonical": [
+        "U+0623"
+      ]
+    },
+    {
+      "presentation": "U+FE84",
+      "canonical": [
+        "U+0623"
+      ]
+    },
+    {
+      "presentation": "U+FE85",
+      "canonical": [
+        "U+0624"
+      ]
+    },
+    {
+      "presentation": "U+FE86",
+      "canonical": [
+        "U+0624"
+      ]
+    },
+    {
+      "presentation": "U+FE87",
+      "canonical": [
+        "U+0625"
+      ]
+    },
+    {
+      "presentation": "U+FE88",
+      "canonical": [
+        "U+0625"
+      ]
+    },
+    {
+      "presentation": "U+FE89",
+      "canonical": [
+        "U+0626"
+      ]
+    },
+    {
+      "presentation": "U+FE8A",
+      "canonical": [
+        "U+0626"
+      ]
+    },
+    {
+      "presentation": "U+FE8B",
+      "canonical": [
+        "U+0626"
+      ]
+    },
+    {
+      "presentation": "U+FE8C",
+      "canonical": [
+        "U+0626"
+      ]
+    },
+    {
+      "presentation": "U+FE8D",
+      "canonical": [
+        "U+0627"
+      ]
+    },
+    {
+      "presentation": "U+FE8E",
+      "canonical": [
+        "U+0627"
+      ]
+    },
+    {
+      "presentation": "U+FE8F",
+      "canonical": [
+        "U+0628"
+      ]
+    },
+    {
+      "presentation": "U+FE90",
+      "canonical": [
+        "U+0628"
+      ]
+    },
+    {
+      "presentation": "U+FE91",
+      "canonical": [
+        "U+0628"
+      ]
+    },
+    {
+      "presentation": "U+FE92",
+      "canonical": [
+        "U+0628"
+      ]
+    },
+    {
+      "presentation": "U+FE93",
+      "canonical": [
+        "U+0629"
+      ]
+    },
+    {
+      "presentation": "U+FE94",
+      "canonical": [
+        "U+0629"
+      ]
+    },
+    {
+      "presentation": "U+FE95",
+      "canonical": [
+        "U+062A"
+      ]
+    },
+    {
+      "presentation": "U+FE96",
+      "canonical": [
+        "U+062A"
+      ]
+    },
+    {
+      "presentation": "U+FE97",
+      "canonical": [
+        "U+062A"
+      ]
+    },
+    {
+      "presentation": "U+FE98",
+      "canonical": [
+        "U+062A"
+      ]
+    },
+    {
+      "presentation": "U+FE99",
+      "canonical": [
+        "U+062B"
+      ]
+    },
+    {
+      "presentation": "U+FE9A",
+      "canonical": [
+        "U+062B"
+      ]
+    },
+    {
+      "presentation": "U+FE9B",
+      "canonical": [
+        "U+062B"
+      ]
+    },
+    {
+      "presentation": "U+FE9C",
+      "canonical": [
+        "U+062B"
+      ]
+    },
+    {
+      "presentation": "U+FE9D",
+      "canonical": [
+        "U+062C"
+      ]
+    },
+    {
+      "presentation": "U+FE9E",
+      "canonical": [
+        "U+062C"
+      ]
+    },
+    {
+      "presentation": "U+FE9F",
+      "canonical": [
+        "U+062C"
+      ]
+    },
+    {
+      "presentation": "U+FEA0",
+      "canonical": [
+        "U+062C"
+      ]
+    },
+    {
+      "presentation": "U+FEA1",
+      "canonical": [
+        "U+062D"
+      ]
+    },
+    {
+      "presentation": "U+FEA2",
+      "canonical": [
+        "U+062D"
+      ]
+    },
+    {
+      "presentation": "U+FEA3",
+      "canonical": [
+        "U+062D"
+      ]
+    },
+    {
+      "presentation": "U+FEA4",
+      "canonical": [
+        "U+062D"
+      ]
+    },
+    {
+      "presentation": "U+FEA5",
+      "canonical": [
+        "U+062E"
+      ]
+    },
+    {
+      "presentation": "U+FEA6",
+      "canonical": [
+        "U+062E"
+      ]
+    },
+    {
+      "presentation": "U+FEA7",
+      "canonical": [
+        "U+062E"
+      ]
+    },
+    {
+      "presentation": "U+FEA8",
+      "canonical": [
+        "U+062E"
+      ]
+    },
+    {
+      "presentation": "U+FEA9",
+      "canonical": [
+        "U+062F"
+      ]
+    },
+    {
+      "presentation": "U+FEAA",
+      "canonical": [
+        "U+062F"
+      ]
+    },
+    {
+      "presentation": "U+FEAB",
+      "canonical": [
+        "U+0630"
+      ]
+    },
+    {
+      "presentation": "U+FEAC",
+      "canonical": [
+        "U+0630"
+      ]
+    },
+    {
+      "presentation": "U+FEAD",
+      "canonical": [
+        "U+0631"
+      ]
+    },
+    {
+      "presentation": "U+FEAE",
+      "canonical": [
+        "U+0631"
+      ]
+    },
+    {
+      "presentation": "U+FEAF",
+      "canonical": [
+        "U+0632"
+      ]
+    },
+    {
+      "presentation": "U+FEB0",
+      "canonical": [
+        "U+0632"
+      ]
+    },
+    {
+      "presentation": "U+FEB1",
+      "canonical": [
+        "U+0633"
+      ]
+    },
+    {
+      "presentation": "U+FEB2",
+      "canonical": [
+        "U+0633"
+      ]
+    },
+    {
+      "presentation": "U+FEB3",
+      "canonical": [
+        "U+0633"
+      ]
+    },
+    {
+      "presentation": "U+FEB4",
+      "canonical": [
+        "U+0633"
+      ]
+    },
+    {
+      "presentation": "U+FEB5",
+      "canonical": [
+        "U+0634"
+      ]
+    },
+    {
+      "presentation": "U+FEB6",
+      "canonical": [
+        "U+0634"
+      ]
+    },
+    {
+      "presentation": "U+FEB7",
+      "canonical": [
+        "U+0634"
+      ]
+    },
+    {
+      "presentation": "U+FEB8",
+      "canonical": [
+        "U+0634"
+      ]
+    },
+    {
+      "presentation": "U+FEB9",
+      "canonical": [
+        "U+0635"
+      ]
+    },
+    {
+      "presentation": "U+FEBA",
+      "canonical": [
+        "U+0635"
+      ]
+    },
+    {
+      "presentation": "U+FEBB",
+      "canonical": [
+        "U+0635"
+      ]
+    },
+    {
+      "presentation": "U+FEBC",
+      "canonical": [
+        "U+0635"
+      ]
+    },
+    {
+      "presentation": "U+FEBD",
+      "canonical": [
+        "U+0636"
+      ]
+    },
+    {
+      "presentation": "U+FEBE",
+      "canonical": [
+        "U+0636"
+      ]
+    },
+    {
+      "presentation": "U+FEBF",
+      "canonical": [
+        "U+0636"
+      ]
+    },
+    {
+      "presentation": "U+FEC0",
+      "canonical": [
+        "U+0636"
+      ]
+    },
+    {
+      "presentation": "U+FEC1",
+      "canonical": [
+        "U+0637"
+      ]
+    },
+    {
+      "presentation": "U+FEC2",
+      "canonical": [
+        "U+0637"
+      ]
+    },
+    {
+      "presentation": "U+FEC3",
+      "canonical": [
+        "U+0637"
+      ]
+    },
+    {
+      "presentation": "U+FEC4",
+      "canonical": [
+        "U+0637"
+      ]
+    },
+    {
+      "presentation": "U+FEC5",
+      "canonical": [
+        "U+0638"
+      ]
+    },
+    {
+      "presentation": "U+FEC6",
+      "canonical": [
+        "U+0638"
+      ]
+    },
+    {
+      "presentation": "U+FEC7",
+      "canonical": [
+        "U+0638"
+      ]
+    },
+    {
+      "presentation": "U+FEC8",
+      "canonical": [
+        "U+0638"
+      ]
+    },
+    {
+      "presentation": "U+FEC9",
+      "canonical": [
+        "U+0639"
+      ]
+    },
+    {
+      "presentation": "U+FECA",
+      "canonical": [
+        "U+0639"
+      ]
+    },
+    {
+      "presentation": "U+FECB",
+      "canonical": [
+        "U+0639"
+      ]
+    },
+    {
+      "presentation": "U+FECC",
+      "canonical": [
+        "U+0639"
+      ]
+    },
+    {
+      "presentation": "U+FECD",
+      "canonical": [
+        "U+063A"
+      ]
+    },
+    {
+      "presentation": "U+FECE",
+      "canonical": [
+        "U+063A"
+      ]
+    },
+    {
+      "presentation": "U+FECF",
+      "canonical": [
+        "U+063A"
+      ]
+    },
+    {
+      "presentation": "U+FED0",
+      "canonical": [
+        "U+063A"
+      ]
+    },
+    {
+      "presentation": "U+FED1",
+      "canonical": [
+        "U+0641"
+      ]
+    },
+    {
+      "presentation": "U+FED2",
+      "canonical": [
+        "U+0641"
+      ]
+    },
+    {
+      "presentation": "U+FED3",
+      "canonical": [
+        "U+0641"
+      ]
+    },
+    {
+      "presentation": "U+FED4",
+      "canonical": [
+        "U+0641"
+      ]
+    },
+    {
+      "presentation": "U+FED5",
+      "canonical": [
+        "U+0642"
+      ]
+    },
+    {
+      "presentation": "U+FED6",
+      "canonical": [
+        "U+0642"
+      ]
+    },
+    {
+      "presentation": "U+FED7",
+      "canonical": [
+        "U+0642"
+      ]
+    },
+    {
+      "presentation": "U+FED8",
+      "canonical": [
+        "U+0642"
+      ]
+    },
+    {
+      "presentation": "U+FED9",
+      "canonical": [
+        "U+0643"
+      ]
+    },
+    {
+      "presentation": "U+FEDA",
+      "canonical": [
+        "U+0643"
+      ]
+    },
+    {
+      "presentation": "U+FEDB",
+      "canonical": [
+        "U+0643"
+      ]
+    },
+    {
+      "presentation": "U+FEDC",
+      "canonical": [
+        "U+0643"
+      ]
+    },
+    {
+      "presentation": "U+FEDD",
+      "canonical": [
+        "U+0644"
+      ]
+    },
+    {
+      "presentation": "U+FEDE",
+      "canonical": [
+        "U+0644"
+      ]
+    },
+    {
+      "presentation": "U+FEDF",
+      "canonical": [
+        "U+0644"
+      ]
+    },
+    {
+      "presentation": "U+FEE0",
+      "canonical": [
+        "U+0644"
+      ]
+    },
+    {
+      "presentation": "U+FEE1",
+      "canonical": [
+        "U+0645"
+      ]
+    },
+    {
+      "presentation": "U+FEE2",
+      "canonical": [
+        "U+0645"
+      ]
+    },
+    {
+      "presentation": "U+FEE3",
+      "canonical": [
+        "U+0645"
+      ]
+    },
+    {
+      "presentation": "U+FEE4",
+      "canonical": [
+        "U+0645"
+      ]
+    },
+    {
+      "presentation": "U+FEE5",
+      "canonical": [
+        "U+0646"
+      ]
+    },
+    {
+      "presentation": "U+FEE6",
+      "canonical": [
+        "U+0646"
+      ]
+    },
+    {
+      "presentation": "U+FEE7",
+      "canonical": [
+        "U+0646"
+      ]
+    },
+    {
+      "presentation": "U+FEE8",
+      "canonical": [
+        "U+0646"
+      ]
+    },
+    {
+      "presentation": "U+FEE9",
+      "canonical": [
+        "U+0647"
+      ]
+    },
+    {
+      "presentation": "U+FEEA",
+      "canonical": [
+        "U+0647"
+      ]
+    },
+    {
+      "presentation": "U+FEEB",
+      "canonical": [
+        "U+0647"
+      ]
+    },
+    {
+      "presentation": "U+FEEC",
+      "canonical": [
+        "U+0647"
+      ]
+    },
+    {
+      "presentation": "U+FEED",
+      "canonical": [
+        "U+0648"
+      ]
+    },
+    {
+      "presentation": "U+FEEE",
+      "canonical": [
+        "U+0648"
+      ]
+    },
+    {
+      "presentation": "U+FEEF",
+      "canonical": [
+        "U+0649"
+      ]
+    },
+    {
+      "presentation": "U+FEF0",
+      "canonical": [
+        "U+0649"
+      ]
+    },
+    {
+      "presentation": "U+FEF1",
+      "canonical": [
+        "U+064A"
+      ]
+    },
+    {
+      "presentation": "U+FEF2",
+      "canonical": [
+        "U+064A"
+      ]
+    },
+    {
+      "presentation": "U+FEF3",
+      "canonical": [
+        "U+064A"
+      ]
+    },
+    {
+      "presentation": "U+FEF4",
+      "canonical": [
+        "U+064A"
+      ]
+    },
+    {
+      "presentation": "U+FEF5",
+      "canonical": [
+        "U+0644",
+        "U+0622"
+      ]
+    },
+    {
+      "presentation": "U+FEF6",
+      "canonical": [
+        "U+0644",
+        "U+0622"
+      ]
+    },
+    {
+      "presentation": "U+FEF7",
+      "canonical": [
+        "U+0644",
+        "U+0623"
+      ]
+    },
+    {
+      "presentation": "U+FEF8",
+      "canonical": [
+        "U+0644",
+        "U+0623"
+      ]
+    },
+    {
+      "presentation": "U+FEF9",
+      "canonical": [
+        "U+0644",
+        "U+0625"
+      ]
+    },
+    {
+      "presentation": "U+FEFA",
+      "canonical": [
+        "U+0644",
+        "U+0625"
+      ]
+    },
+    {
+      "presentation": "U+FEFB",
+      "canonical": [
+        "U+0644",
+        "U+0627"
+      ]
+    },
+    {
+      "presentation": "U+FEFC",
+      "canonical": [
+        "U+0644",
+        "U+0627"
+      ]
+    }
+  ]
+}
