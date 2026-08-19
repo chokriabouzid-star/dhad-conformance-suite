@@ -136,7 +136,7 @@ def verify_file(path: Path, expected_meta, found_anchors):
     data = json.loads(path.read_text(encoding="utf-8"))
 
     assert data["schema_version"] == "1.0", f"{path.name}: schema_version mismatch"
-    assert data["dhad_spec"] == "v1.0+CR-01..CR-07", f"{path.name}: dhad_spec mismatch"
+    assert data["dhad_spec"] == "v1.1", f"{path.name}: dhad_spec mismatch"
     assert isinstance(data["generated_by"], str) and data["generated_by"].startswith("dhad-rust-"), \
         f"{path.name}: generated_by invalid"
     assert data["suite"] == expected_meta["suite"], f"{path.name}: suite mismatch"
