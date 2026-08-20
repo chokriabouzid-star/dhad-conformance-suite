@@ -5,7 +5,7 @@
   "schema_version": "1.0",
   "source_suite": "tests/suite2_tagged.rs",
   "suite": "tagged",
-  "vector_count": 30,
+  "vector_count": 32,
   "vectors": [
     {
       "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
@@ -402,6 +402,36 @@
       },
       "mode": "B",
       "name": "at_f01_tanween_fath_and_damm_mode_b"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 64,
+        "reason": "prosody bits 6-7 (0xC0) are reserved and must be zero"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000000400000933fb2ca"
+      },
+      "mode": "B",
+      "name": "at_i25_prosody_reserved_bit_0x40"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 128,
+        "reason": "prosody bits 6-7 (0xC0) are reserved and must be zero"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100000000800000d3a91d5b"
+      },
+      "mode": "B",
+      "name": "at_i25_prosody_reserved_bit_0x80"
     }
   ]
 }
