@@ -73,7 +73,7 @@ Example shape:
 
     {
       "schema_version": "1.0",
-      "dhad_spec": "v1.1",
+      "dhad_spec": "v1.2",
       "generated_by": "dhad-rust-1.2.x",
       "suite": "golden",
       "mode": "A",
