@@ -143,6 +143,14 @@ def validate_flags(atom: Atom, atom_index: int) -> RefError | None:
 def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
     prosody = atom.prosody
 
+    if prosody & 0xC0:
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="prosody bits 6-7 (0xC0) are reserved and must be zero",
+        )
+
     tanween_mask = TW_FATH | TW_DAMM | TW_KASR
     madd_mask = MADD_NORMAL | MADD_EXTENDED
 
