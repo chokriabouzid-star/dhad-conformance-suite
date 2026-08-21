@@ -151,6 +151,15 @@ def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
             reason="prosody bits 6-7 (0xC0) are reserved and must be zero",
         )
 
+        # I24: SUKUN and TANWEEN exclusion
+    if (atom.marks & 0x0008) and (prosody & (TW_FATH | TW_DAMM | TW_KASR)):
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="SUKUN and TANWEEN are mutually exclusive on the same atom",
+        )
+
     tanween_mask = TW_FATH | TW_DAMM | TW_KASR
     madd_mask = MADD_NORMAL | MADD_EXTENDED
 
@@ -473,6 +482,9 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
                 return err("InvalidMarkCombo", marks=current_marks | DIACRITICS[cp], atom_index=len(atoms))
 
             mark_bit = DIACRITICS[cp]
+                        # I24 check: SUKUN arriving after TANWEEN
+            if mark_bit == 0x0008 and (current_prosody & (TW_FATH | TW_DAMM | TW_KASR)):
+                return err("InvalidProsody", prosody=current_prosody, atom_index=len(atoms), reason="SUKUN and TANWEEN are mutually exclusive on the same atom")
             new_marks = current_marks | mark_bit
 
             if new_marks == current_marks:
@@ -498,6 +510,9 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
             prosody_bit = PROSODY_MARKS[cp]
             new_prosody = current_prosody | prosody_bit
 
+                        # I24: Sukun + Tanween check
+            if prosody_bit in (TW_FATH, TW_DAMM, TW_KASR) and (current_marks & 0x0008):
+                return err("InvalidProsody", prosody=new_prosody, atom_index=len(atoms), reason="SUKUN and TANWEEN are mutually exclusive on the same atom")
             if new_prosody == current_prosody:
                 return err("InvalidProsody", prosody=new_prosody, atom_index=len(atoms), reason="duplicate prosody mark on same atom")
 

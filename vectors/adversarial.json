@@ -1,11 +1,11 @@
 {
   "dhad_spec": "v1.2",
-  "generated_by": "dhad-rust-1.2.2",
+  "generated_by": "dhad-rust-1.2.3",
   "mode": "A",
   "schema_version": "1.0",
   "source_suite": "tests/suite3_adversarial.rs",
   "suite": "adversarial",
-  "vector_count": 39,
+  "vector_count": 40,
   "vectors": [
     {
       "error": {
@@ -567,6 +567,22 @@
       "name": "at_046_bidi_rlo_attack",
       "phonetic_hash_hex": "495c2f30739a11b02392c39ef60eb863a0a227604632312bac0c06d2e96c3094",
       "stream_hex": "020000000000000001000000000000000200000000000000"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidProsody",
+        "prosody": 1,
+        "reason": "SUKUN and TANWEEN are mutually exclusive on the same atom"
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "d8a8d98bd992"
+      },
+      "input_utf8_preview": "بًْ",
+      "mode": "A",
+      "name": "at_037_sukun_plus_tanween"
     }
   ]
 }

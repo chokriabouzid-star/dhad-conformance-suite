@@ -1,6 +1,6 @@
 {
   "dhad_spec": "v1.2",
-  "generated_by": "dhad-rust-1.2.2",
+  "generated_by": "dhad-rust-1.2.3",
   "mode": "B",
   "schema_version": "1.0",
   "source_suite": "tests/suite2_tagged.rs",

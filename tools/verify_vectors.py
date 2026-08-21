@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent / "vectors"
 
 EXPECTED_FILES = {
     "golden.json": {"suite": "golden", "mode": "A", "count": 116},
-    "adversarial.json": {"suite": "adversarial", "mode": "A", "count": 39},
+    "adversarial.json": {"suite": "adversarial", "mode": "A", "count": 40},
     "tagged.json": {"suite": "tagged", "mode": "B", "count": 32},
 }
 
