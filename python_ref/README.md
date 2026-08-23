@@ -7,9 +7,9 @@ Independent Python reference implementation for Dhad conformance.
 | Mode | Vectors | Result |
 |------|---------|--------|
 | Mode A (golden.json) | 116 | 116/116 |
-| Mode A (adversarial.json) | 39 | 39/39 |
-| Mode B (tagged.json) | 30 | 30/30 |
-| **Total** | **185** | **185/185** |
+| Mode A (adversarial.json) | 40 | 40/40 |
+| Mode B (tagged.json) | 32 | 32/32 |
+| **Total** | **188** | **188/188** |
 
 Full parity achieved:
 
@@ -31,11 +31,11 @@ Expected:
 
 text
 
-tagged.json: 30/30 vectors matched in Phase 2
+tagged.json: 32/32 vectors matched in Phase 2
 ALL TAGGED VECTORS MATCH (Phase 2: exact ok outputs + full error object parity)
 
 golden.json: 116/116
-adversarial.json: 39/39
+adversarial.json: 40/40
 ALL MODE A VECTORS MATCH
 Dependencies
 Python 3.10+ standard library only. No external packages.

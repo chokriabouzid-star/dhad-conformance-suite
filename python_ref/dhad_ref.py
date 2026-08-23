@@ -190,6 +190,51 @@ def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
             reason="MADD bits only permitted on LONG_VOWEL_CLASS atoms",
         )
 
+    # I13: MADD bits are mutually exclusive with TANWEEN bits
+    if madd_bits and tanween_bits:
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="MADD bits are mutually exclusive with TANWEEN bits",
+        )
+
+    # I18: TANWEEN_FATH and FATHA are contradictory
+    if (prosody & TW_FATH) and (atom.marks & 0x01):
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="TANWEEN_FATH and FATHA are contradictory",
+        )
+
+    # I19: TANWEEN_DAMM and DAMMA are contradictory
+    if (prosody & TW_DAMM) and (atom.marks & 0x02):
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="TANWEEN_DAMM and DAMMA are contradictory",
+        )
+
+    # I20: TANWEEN_KASR and KASRA are contradictory
+    if (prosody & TW_KASR) and (atom.marks & 0x04):
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="TANWEEN_KASR and KASRA are contradictory",
+        )
+
+    # I21: SUPERSCRIPT_ALEF and TANWEEN bits are contradictory
+    if (prosody & 0x20) and (prosody & 0x07):
+        return err(
+            "InvalidProsody",
+            prosody=prosody,
+            atom_index=atom_index,
+            reason="SUPERSCRIPT_ALEF and TANWEEN bits are contradictory",
+        )
+
     return None
 
 
@@ -395,15 +440,14 @@ PROSODY_MARKS: dict[int, int] = {
     0x0670: 0x20,  # SUPERSCRIPT_ALEF
 }
 
-# Filter characters (silently removed)
-FILTER_CHARS: set[int] = {
-    0x0640,  # KASHIDA
-    0x200D,  # ZWJ
-    0xFEFF,  # BOM / ZWNBSP
-    0xFE00,  # VARIATION SELECTOR
-    0x200F,  # RTL MARK
-    0x202E,  # RLO
-}
+# Filter characters (silently removed) — Complete 32 Noise Codepoints matching Dhad Spec §5.1
+FILTER_CHARS: set[int] = (
+    {0x0640, 0x034F, 0xFEFF}
+    | set(range(0x200C, 0x2010))  # ZWNJ, ZWJ, LRM, RLM (0x200C..=0x200F)
+    | set(range(0x202A, 0x202F))  # LRE, RLE, PDF, LRO, RLO (0x202A..=0x202E)
+    | set(range(0x2066, 0x206A))  # LRI, RLI, FSI, PDI (0x2066..=0x2069)
+    | set(range(0xFE00, 0xFE10))  # VS01..VS16 (0xFE00..=0xFE0F)
+)
 
 # Valid mark combinations (bitmask values)
 VALID_MARK_COMBOS: set[int] = {
@@ -525,6 +569,10 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
 
         # If we get here, it is a base-class character. Flush previous atom.
         flush_atom()
+        if atoms:
+            _ve = validate_atom(atoms[-1], len(atoms) - 1)
+            if _ve is not None:
+                return _ve
         position = i
 
         # Positional form
@@ -569,6 +617,12 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
         return err("UnmappedCodepoint", codepoint=cp, position=filtered_pos)
 
     flush_atom()
+
+    # Post-build invariant check on last atom
+    if atoms:
+        _ve = validate_atom(atoms[-1], len(atoms) - 1)
+        if _ve is not None:
+            return _ve
 
     # Compute hashes
     stream_bytes = b"".join(atom.to_bytes() for atom in atoms)

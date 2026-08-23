@@ -67,9 +67,9 @@ Files in this repository must be understandable without reading Rust code.
 | File | Suite | Mode | Vectors | ok | err |
 |------|-------|------|---------|----|-----|
 | `vectors/golden.json` | golden | A | 116 | 116 | 0 |
-| `vectors/adversarial.json` | adversarial | A | 40 | 3 | 36 |
-| `vectors/tagged.json` | tagged | B | 32 | 9 | 21 |
-| **Total** | | | **188** | **128** | **57** |
+| `vectors/adversarial.json` | adversarial | A | 40 | 3 | 37 |
+| `vectors/tagged.json` | tagged | B | 32 | 9 | 23 |
+| **Total** | | | **188** | **128** | **60** |
 
 Schema version:
 

@@ -368,9 +368,9 @@ The current published corpus contains:
 Current counts:
 
 - `golden.json` = 116
-- `adversarial.json` = 39
-- `tagged.json` = 30
-- total = 185
+- `adversarial.json` = 40
+- `tagged.json` = 32
+- total = 188
 
 These counts are corpus facts, not schema requirements.
 
