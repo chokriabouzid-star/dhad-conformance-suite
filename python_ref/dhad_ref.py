@@ -596,20 +596,22 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
             current_prosody = 0
 
     # Pre-process via FAPS decomposition (Stage 3)
-    decomposed_cps: list[tuple[int, int]] = []  # (cp, original_char_idx)
+    decomposed_cps: list[tuple[int, int, int]] = []  # (canonical_cp, original_char_idx, filtered_input_idx)
+    filtered_input_count = 0
     for i, ch in enumerate(text):
         raw_cp = ord(ch)
         if raw_cp in FILTER_CHARS:
             continue
         decomp = faps_decompose(raw_cp)
         if decomp is None:
-            # Unmapped presentation form
-            return err("UnmappedCodepoint", codepoint=raw_cp, position=len(decomposed_cps))
+            # Unmapped presentation form — position is the 0-based index in the filtered input stream
+            return err("UnmappedCodepoint", codepoint=raw_cp, position=filtered_input_count)
         for d_cp in decomp:
-            decomposed_cps.append((d_cp, i))
+            decomposed_cps.append((d_cp, i, filtered_input_count))
+        filtered_input_count += 1
 
     filtered_pos = -1
-    for d_idx, (cp, orig_i) in enumerate(decomposed_cps):
+    for d_idx, (cp, orig_i, _f_idx) in enumerate(decomposed_cps):
         if cp in FILTER_CHARS:
             continue
 
