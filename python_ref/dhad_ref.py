@@ -474,6 +474,94 @@ for v in DIGITS.values():
 # Mode A pipeline
 # ---------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# Stage 3: Complete 141-entry FAPS Decomposition (matching src/faps.rs)
+# ---------------------------------------------------------------------------
+
+def faps_decompose(cp: int) -> tuple[int, ...] | None:
+    """
+    Decomposes Arabic Presentation Forms (FB50..FDFF, FE70..FEFC) to canonical codepoints.
+    Returns:
+      - tuple of 1 or 2 canonical codepoints if mapped
+      - None if unmapped presentation form (ERR_UNMAPPED_CODEPOINT)
+      - (cp,) if pass-through (outside presentation form ranges, e.g. U+FEFF)
+    """
+    # Harakat (FE70..FE7F)
+    if cp == 0xFE70: return (0x064B,)
+    if cp == 0xFE71: return (0x0640, 0x064B)
+    if cp == 0xFE72: return (0x064C,)
+    if cp == 0xFE73: return None
+    if cp == 0xFE74: return (0x064D,)
+    if cp == 0xFE75: return None
+    if cp == 0xFE76: return (0x064E,)
+    if cp == 0xFE77: return (0x0640, 0x064E)
+    if cp == 0xFE78: return (0x064F,)
+    if cp == 0xFE79: return (0x0640, 0x064F)
+    if cp == 0xFE7A: return (0x0650,)
+    if cp == 0xFE7B: return (0x0640, 0x0650)
+    if cp == 0xFE7C: return (0x0651,)
+    if cp == 0xFE7D: return (0x0640, 0x0651)
+    if cp == 0xFE7E: return (0x0652,)
+    if cp == 0xFE7F: return (0x0640, 0x0652)
+
+    # Hamza / Alef variants (FE80..FE8C)
+    if cp == 0xFE80: return (0x0621,)
+    if cp in (0xFE81, 0xFE82): return (0x0622,)
+    if cp in (0xFE83, 0xFE84): return (0x0623,)
+    if cp in (0xFE85, 0xFE86): return (0x0624,)
+    if cp in (0xFE87, 0xFE88): return (0x0625,)
+    if 0xFE89 <= cp <= 0xFE8C: return (0x0626,)
+
+    # Core 28 letters (FE8D..FEF4)
+    if cp in (0xFE8D, 0xFE8E): return (0x0627,)
+    if 0xFE8F <= cp <= 0xFE92: return (0x0628,)
+    if cp in (0xFE93, 0xFE94): return (0x0629,)
+    if 0xFE95 <= cp <= 0xFE98: return (0x062A,)
+    if 0xFE99 <= cp <= 0xFE9C: return (0x062B,)
+    if 0xFE9D <= cp <= 0xFEA0: return (0x062C,)
+    if 0xFEA1 <= cp <= 0xFEA4: return (0x062D,)
+    if 0xFEA5 <= cp <= 0xFEA8: return (0x062E,)
+    if cp in (0xFEA9, 0xFEAA): return (0x062F,)
+    if cp in (0xFEAB, 0xFEAC): return (0x0630,)
+    if cp in (0xFEAD, 0xFEAE): return (0x0631,)
+    if cp in (0xFEAF, 0xFEB0): return (0x0632,)
+    if 0xFEB1 <= cp <= 0xFEB4: return (0x0633,)
+    if 0xFEB5 <= cp <= 0xFEB8: return (0x0634,)
+    if 0xFEB9 <= cp <= 0xFEBC: return (0x0635,)
+    if 0xFEBD <= cp <= 0xFEC0: return (0x0636,)
+    if 0xFEC1 <= cp <= 0xFEC4: return (0x0637,)
+    if 0xFEC5 <= cp <= 0xFEC8: return (0x0638,)
+    if 0xFEC9 <= cp <= 0xFECC: return (0x0639,)
+    if 0xFECD <= cp <= 0xFED0: return (0x063A,)
+    if 0xFED1 <= cp <= 0xFED4: return (0x0641,)
+    if 0xFED5 <= cp <= 0xFED8: return (0x0642,)
+    if 0xFED9 <= cp <= 0xFEDC: return (0x0643,)
+    if 0xFEDD <= cp <= 0xFEE0: return (0x0644,)
+    if 0xFEE1 <= cp <= 0xFEE4: return (0x0645,)
+    if 0xFEE5 <= cp <= 0xFEE8: return (0x0646,)
+    if 0xFEE9 <= cp <= 0xFEEC: return (0x0647,)
+    if cp in (0xFEED, 0xFEEE): return (0x0648,)
+    if cp in (0xFEEF, 0xFEF0): return (0x0649,)
+    if 0xFEF1 <= cp <= 0xFEF4: return (0x064A,)
+
+    # Lam-Alef ligatures (FEF5..FEFC)
+    if cp in (0xFEF5, 0xFEF6): return (0x0644, 0x0622)
+    if cp in (0xFEF7, 0xFEF8): return (0x0644, 0x0623)
+    if cp in (0xFEF9, 0xFEFA): return (0x0644, 0x0625)
+    if cp in (0xFEFB, 0xFEFC): return (0x0644, 0x0627)
+
+    # FE range remainders
+    if cp in (0xFEFD, 0xFEFE): return None
+
+    # Forms-A
+    if cp in (0xFB50, 0xFB51): return (0x0671,)
+    if 0xFB52 <= cp <= 0xFDFF: return None
+
+    # Pass-through for non-presentation forms
+    return (cp,)
+
+
 def process_mode_a_ref(input_bytes: bytes) -> RefResult:
     if len(input_bytes) > MAX_INPUT_BYTES:
         return err("InputTooLarge")
@@ -507,11 +595,21 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
             current_marks = 0
             current_prosody = 0
 
-    filtered_pos = -1
+    # Pre-process via FAPS decomposition (Stage 3)
+    decomposed_cps: list[tuple[int, int]] = []  # (cp, original_char_idx)
     for i, ch in enumerate(text):
-        cp = ord(ch)
+        raw_cp = ord(ch)
+        if raw_cp in FILTER_CHARS:
+            continue
+        decomp = faps_decompose(raw_cp)
+        if decomp is None:
+            # Unmapped presentation form
+            return err("UnmappedCodepoint", codepoint=raw_cp, position=len(decomposed_cps))
+        for d_cp in decomp:
+            decomposed_cps.append((d_cp, i))
 
-        # Filter characters
+    filtered_pos = -1
+    for d_idx, (cp, orig_i) in enumerate(decomposed_cps):
         if cp in FILTER_CHARS:
             continue
 
