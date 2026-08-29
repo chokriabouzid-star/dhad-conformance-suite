@@ -5,7 +5,7 @@
   "schema_version": "1.0",
   "source_suite": "tests/suite2_tagged.rs",
   "suite": "tagged",
-  "vector_count": 32,
+  "vector_count": 36,
   "vectors": [
     {
       "core_hash_hex": "68d32b955388e186a3ad963008c4aed8f9d957d9fe72ad0e29ad5012d57e140d",
@@ -432,6 +432,62 @@
       },
       "mode": "B",
       "name": "at_i25_prosody_reserved_bit_0x80"
+    },
+    {
+      "error": {
+        "codepoint": 512,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000002000000000000e4a31de1"
+      },
+      "mode": "B",
+      "name": "at_i01_base_out_of_range"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 3
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "444841440142010000000100030000000000fdc0bc3c"
+      },
+      "mode": "B",
+      "name": "at_i03_invalid_mark_combo"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 8
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "4448414401420100000040000800000000004df24cb3"
+      },
+      "mode": "B",
+      "name": "at_i17_inert_marks_zero"
+    },
+    {
+      "error": {
+        "atom_index": 0,
+        "kind": "InvalidMarkCombo",
+        "marks": 32
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "44484144014201000000010020000000000065b784bd"
+      },
+      "mode": "B",
+      "name": "at_i23_marks_reserved_bits"
     }
   ]
 }

@@ -113,7 +113,7 @@ def phonetic_hash_from_atoms(core_hash: bytes, atoms: list[Atom]) -> bytes:
 # ---------------------------------------------------------------------------
 
 def validate_base(atom: Atom, atom_index: int) -> RefError | None:
-    if atom.base in RESERVED_BASES:
+    if atom.base not in VALID_BASE_IDS:
         return err(
             "UnmappedCodepoint",
             codepoint=atom.base,
@@ -238,6 +238,23 @@ def validate_prosody(atom: Atom, atom_index: int) -> RefError | None:
     return None
 
 
+def validate_marks(atom: Atom, atom_index: int) -> RefError | None:
+    """I03/I17/I23: validate mark combinations and base-mark compatibility."""
+    if atom.marks not in VALID_MARK_COMBOS:
+        return err(
+            "InvalidMarkCombo",
+            marks=atom.marks,
+            atom_index=atom_index,
+        )
+    if atom.base in PROSODY_INERT_BASES and atom.marks != 0:
+        return err(
+            "InvalidMarkCombo",
+            marks=atom.marks,
+            atom_index=atom_index,
+        )
+    return None
+
+
 def validate_atom(atom: Atom, atom_index: int) -> RefError | None:
     if atom.reserved != 0:
         return err(
@@ -247,6 +264,10 @@ def validate_atom(atom: Atom, atom_index: int) -> RefError | None:
         )
 
     failure = validate_base(atom, atom_index)
+    if failure is not None:
+        return failure
+
+    failure = validate_marks(atom, atom_index)
     if failure is not None:
         return failure
 
@@ -469,6 +490,12 @@ for v in PUNCTUATION.values():
 for v in DIGITS.values():
     PROSODY_INERT_BASES.add(v)
 
+# All valid base IDs for Mode B atom validation (I01)
+VALID_BASE_IDS: frozenset[int] = frozenset(
+    {bid for bid, _ in BASE_LETTERS.values()}
+    | PROSODY_INERT_BASES
+) - RESERVED_BASES
+
 
 # ---------------------------------------------------------------------------
 # Mode A pipeline
@@ -604,8 +631,8 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
             continue
         decomp = faps_decompose(raw_cp)
         if decomp is None:
-            # Unmapped presentation form — position is the 0-based index in the filtered input stream
-            return err("UnmappedCodepoint", codepoint=raw_cp, position=filtered_input_count)
+            # Unmapped presentation form — position is the 0-based index in the original input stream
+            return err("UnmappedCodepoint", codepoint=raw_cp, position=i)
         for d_cp in decomp:
             decomposed_cps.append((d_cp, i, filtered_input_count))
         filtered_input_count += 1
