@@ -632,22 +632,19 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
         decomp = faps_decompose(raw_cp)
         if decomp is None:
             # Unmapped presentation form — position is the 0-based index in the original input stream
-            return err("UnmappedCodepoint", codepoint=raw_cp, position=i)
+            return err("UnmappedCodepoint", codepoint=raw_cp, position=filtered_input_count)
         for d_cp in decomp:
             decomposed_cps.append((d_cp, i, filtered_input_count))
         filtered_input_count += 1
 
-    filtered_pos = -1
-    for d_idx, (cp, orig_i, _f_idx) in enumerate(decomposed_cps):
+    for d_idx, (cp, orig_i, f_idx) in enumerate(decomposed_cps):
         if cp in FILTER_CHARS:
             continue
-
-        filtered_pos += 1
 
         # Diacritics (marks)
         if cp in DIACRITICS:
             if current_base is None:
-                return err("OrphanDiacritic", codepoint=cp, position=filtered_pos)
+                return err("OrphanDiacritic", codepoint=cp, position=f_idx)
 
             if current_base in PROSODY_INERT_BASES:
                 return err("InvalidMarkCombo", marks=current_marks | DIACRITICS[cp], atom_index=len(atoms))
@@ -670,7 +667,7 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
         # Prosody marks
         if cp in PROSODY_MARKS:
             if current_base is None:
-                return err("OrphanDiacritic", codepoint=cp, position=filtered_pos)
+                return err("OrphanDiacritic", codepoint=cp, position=f_idx)
 
             if current_base in PROSODY_INERT_BASES:
                 if cp == 0x0670:
@@ -741,7 +738,7 @@ def process_mode_a_ref(input_bytes: bytes) -> RefResult:
             continue
 
         # Unknown codepoint
-        return err("UnmappedCodepoint", codepoint=cp, position=filtered_pos)
+        return err("UnmappedCodepoint", codepoint=cp, position=f_idx)
 
     flush_atom()
 

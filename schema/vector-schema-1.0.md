@@ -73,7 +73,7 @@ Example shape:
 
     {
       "schema_version": "1.0",
-      "dhad_spec": "v1.2",
+      "dhad_spec": "v1.3",
       "generated_by": "dhad-rust-1.2.x",
       "suite": "golden",
       "mode": "A",
@@ -130,7 +130,7 @@ Notes:
 
 - `generated_by` is informational metadata and is not part of hash computation.
 - `vector_count` is redundant by design and must match the actual array length.
-- Official v1.2.x corpus files use `schema_version = "1.0"`.
+- Official v1.3.x corpus files use `schema_version = "1.0"`.
 
 ---
 
@@ -368,9 +368,9 @@ The current published corpus contains:
 Current counts:
 
 - `golden.json` = 116
-- `adversarial.json` = 40
+- `adversarial.json` = 43
 - `tagged.json` = 36
-- total = 192
+- total = 195
 
 These counts are corpus facts, not schema requirements.
 

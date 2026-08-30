@@ -5,7 +5,7 @@
   "schema_version": "1.0",
   "source_suite": "tests/suite3_adversarial.rs",
   "suite": "adversarial",
-  "vector_count": 40,
+  "vector_count": 43,
   "vectors": [
     {
       "error": {
@@ -583,6 +583,51 @@
       "input_utf8_preview": "بًْ",
       "mode": "A",
       "name": "at_037_sukun_plus_tanween"
+    },
+    {
+      "error": {
+        "codepoint": 65139,
+        "kind": "UnmappedCodepoint",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e2808cefb9b3"
+      },
+      "input_utf8_preview": "‌ﹳ",
+      "mode": "A",
+      "name": "at_047_zwnj_plus_unmapped_faps"
+    },
+    {
+      "error": {
+        "codepoint": 122,
+        "kind": "UnmappedCodepoint",
+        "position": 1
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "efbbbb7a"
+      },
+      "input_utf8_preview": "ﻻz",
+      "mode": "A",
+      "name": "at_048_lam_alef_plus_unmapped"
+    },
+    {
+      "error": {
+        "codepoint": 1614,
+        "kind": "OrphanDiacritic",
+        "position": 0
+      },
+      "expected_result": "err",
+      "input": {
+        "encoding": "hex",
+        "hex": "e2808cd98e"
+      },
+      "input_utf8_preview": "‌َ",
+      "mode": "A",
+      "name": "at_049_zwnj_plus_orphan_diacritic"
     }
   ]
 }

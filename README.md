@@ -62,14 +62,14 @@ Files in this repository must be understandable without reading Rust code.
 
 ---
 
-## Current corpus (v1.2.x bootstrap)
+## Current corpus (v1.3.x bootstrap)
 
 | File | Suite | Mode | Vectors | ok | err |
 |------|-------|------|---------|----|-----|
 | `vectors/golden.json` | golden | A | 116 | 116 | 0 |
-| `vectors/adversarial.json` | adversarial | A | 40 | 3 | 37 |
+| `vectors/adversarial.json` | adversarial | A | 43 | 3 | 40 |
 | `vectors/tagged.json` | tagged | B | 36 | 9 | 27 |
-| **Total** | | | **192** | **128** | **64** |
+| **Total** | | | **195** | **128** | **67** |
 
 Schema version:
 
@@ -95,7 +95,7 @@ golden.json: OK ...
 adversarial.json: OK ...
 tagged.json: OK ...
 anchors: OK (4 found)
-total vectors verified: 192
+total vectors verified: 195
 ALL VECTOR FILES VERIFIED
 The verifier checks:
 
@@ -136,7 +136,7 @@ schema defined
 corpus populated
 Python verifier present
 cross-language hash verification complete
-full Python protocol reimplementation complete (192/192 match)
+full Python protocol reimplementation complete (195/195 match)
 This repository does not replace the Dhad specification.
 It carries conformance artifacts for independent implementations.
 

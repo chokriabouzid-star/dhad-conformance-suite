@@ -8,8 +8,8 @@ Independent Python reference implementation for Dhad conformance.
 |------|---------|--------|
 | Mode A (golden.json) | 116 | 116/116 |
 | Mode A (adversarial.json) | 40 | 40/40 |
-| Mode B (tagged.json) | 32 | 32/32 |
-| **Total** | **188** | **188/188** |
+| Mode B (tagged.json) | 36 | 36/36 |
+| **Total** | **195** | **195/195** |
 
 Full parity achieved:
 
@@ -31,7 +31,7 @@ Expected:
 
 text
 
-tagged.json: 32/32 vectors matched in Phase 2
+tagged.json: 36/36 vectors matched in Phase 2
 ALL TAGGED VECTORS MATCH (Phase 2: exact ok outputs + full error object parity)
 
 golden.json: 116/116
